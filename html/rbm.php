@@ -10,9 +10,9 @@
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	
-	
+
+
+
 </head>
 
 <body>
@@ -25,13 +25,13 @@
 	  <a href="http://eus/cm/inventory/index.php#" target="_blank"> CM Inventory </a>
 	</div>
 
-	
+
 	<div class="frist"  style="padding-top:100px;text-decoration;">
 	<!-- Header -->
     <header class="w3-container">
       <h1><b><i class="fa fa-file w3-xxlarge"></i> Create Rental Building Master</b></h1>
     </header>
-	
+
 	<form>
 		<h2>อัตราค่าบริการ : </h2>
 			<table id="mytable">
@@ -75,32 +75,32 @@
 				<td>3,265.753</td>
 
 			  </tr>
-			  
 
-			 			  
+
+
 			</table>
 			<br>
-			<button onclick="myFunction2()">Add In Row</button>
+			<button onclick="myFunction2()">Add In Row TEST</button>
 			<button onclick="myFunction3()">Add Row</button>
 
-			
+
 			<div class="logina " style="border-style:none; background-color:linen; width:100%; margin-left:89%; " onclick="myFunction()"  >
 				<a href="#"  style=" background-color: #4CAF50;  color: white; border-radius: 4px;">
 					  <span class="glyphicon glyphicon-save-file" ></span> Save File / Print
 				</a>
-				
+
 			</div>
 
 	</form>
-	
+
 	<script>
 		function myFunction() {
 			window.print();
 		}
-		
-		
-		
-		
+
+
+
+
 		function myFunction2() {
 			var table = document.getElementById("mytable");
 			var row = table.insertRow(1);
@@ -140,7 +140,7 @@
 			cell16.innerHTML = "new";
 			cell17.innerHTML = "new";
 		}
-		
+
 		function myFunction3() {
 			var table = document.getElementById("mytable");
 			var row = table.insertRow(1);
@@ -178,14 +178,14 @@
 			cell14.innerHTML = "new";
 			cell15.innerHTML = "new";
 			cell16.innerHTML = "new";
-			cell17.innerHTML = "new";	
-			
+			cell17.innerHTML = "new";
+
 		}
-		
-				
+
+
 
 	</script>
-	
+
 </body>
 
 </html>
