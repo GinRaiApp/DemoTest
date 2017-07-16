@@ -30,7 +30,7 @@
 	<!-- Header -->
     <header class="w3-container">
       <h1><b><i class="fa fa-area-chart w3-xxlarge"></i> Annual Report </b></h1>
-			<div id="LineGraphContainer" style="margin:10px Auto 100px Auto; height: 350px; width: 40%; "></div>
+			<div id="LineGraphContainer" style="margin:10px Auto 100px Auto; height: 550px; width: 80%;"></div>
     </header>
 
 
@@ -89,7 +89,7 @@
 
 
 	<div class="grap" >
-		<div id="BarChartContainer" style="height: 550px; width: 80%; margin:10px Auto 100px Auto;"></div>
+		<div id="BarChartContainer" style="margin:10px Auto 100px Auto; height: 350px; width: 40%;"></div>
     <!-- <div id="chartContainer" style="margin: 18px; height: 350px; width: 40%; display: inline-block;  "></div> -->
 
 	<div style="background-color:#ccc; display: inline-block; margin: 18px; height: 350px; width: 55%; ">
