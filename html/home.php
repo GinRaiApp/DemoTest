@@ -10,12 +10,12 @@
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-		
+
+
 </head>
 
 <body>
-	  
+
 	<div class="navbar">
 	  <a href="http://localhost/p_inventory/html/first.php "><b>True Inventory</b></a>
 	  <a href="http://localhost/p_inventory/html/home.php">Report</a>
@@ -24,16 +24,16 @@
 	  <a href="http://eus/cm/inventory/index.php#" target="_blank"> CM Inventory </a>
 	</div>
 
-	
-	
+
+
 	<div class="frist"  style="padding-top:100px;text-decoration; ">
 	<!-- Header -->
     <header class="w3-container">
       <h1><b><i class="fa fa-area-chart w3-xxlarge"></i> Annual Report </b></h1>
-	  <div id="chartContainer" style="height: 550px; width: 80%; margin:10px Auto 100px Auto;">
+			<div id="LineGraphContainer" style="margin:10px Auto 100px Auto; height: 350px; width: 40%; "></div>
     </header>
 
-	
+
     <form class="finp">
 	<h1><b><i class="fa fa-area-chart w3-xxlarge"></i> Overview Seat </b></h1>
       <div class="w3-row-padding w3-margin-bottom" id="ipn">
@@ -85,13 +85,13 @@
       </div>
 
     </form>
-	
-	
-	
+
+
+
 	<div class="grap" >
-	
-    <div id="chartContainer" style="margin: 18px; height: 350px; width: 40%; display: inline-block;  "></div>
-	
+		<div id="BarChartContainer" style="height: 550px; width: 80%; margin:10px Auto 100px Auto;"></div>
+    <!-- <div id="chartContainer" style="margin: 18px; height: 350px; width: 40%; display: inline-block;  "></div> -->
+
 	<div style="background-color:#ccc; display: inline-block; margin: 18px; height: 350px; width: 55%; ">
 		<div id="chartContainer2" style=" float: left; margin:15px; height: 200px; width: 30%; "></div>
 		<div id="chartContainer3" style=" float: left; margin:13px; height: 200px; width: 30%; "></div>
@@ -101,49 +101,48 @@
 
 	<script type="text/javascript" style="width:100px; color:#4d4d4d;">
 	      	window.onload = function () {
-        	var chart = new CanvasJS.Chart("chartContainer", {
+        	var chart = new CanvasJS.Chart("BarChartContainer", {
         		title:{text: "Total Seat"},
-				theme: "theme3",
-                    animationEnabled: true,
-				toolTip: {
-					shared: true
-				},			
-				axisY: {
-					title: "Seat"
-				},
-				axisX: {
-					title: "Building"
-				},	
-				data: [
-        		{
-        			type: "column",	
-					name: "Seat Total",
-					legendText: "Seat Total",
-					indexLabel: "{y}",
-					showInLegend: true, 
-					dataPoints:[
-					{label: "CP2", y: 690},
-					{label: "TRUE2", y: 1868},
-					{label: "KKN", y: 1327},
-					{label: "ITALTHAI", y: 90},
-					]
-				},
-				{
-					type: "column",	
-					name: "Null",
-					legendText: "Null",
-					showInLegend: true,
-					dataPoints:[
-					{label: "CP2", y: 100},
-					{label: "TRUE2", y: 250},
-					{label: "KKN", y: 180},
-					{label: "ITALTHAI", y: 50},
-					]
-				}
-				
-				],
-				
-				
+						theme: "theme3",
+            animationEnabled: true,
+						toolTip: {
+								shared: true
+						},
+						axisY: {
+								title: "Seat"
+						},
+						axisX: {
+								title: "Building"
+						},
+						data: [
+		        		{
+			        	type: "column",
+								name: "Seat Total",
+								legendText: "Seat Total",
+								indexLabel: "{y}",
+								showInLegend: true,
+								dataPoints:[
+									{label: "CP2", y: 690},
+									{label: "TRUE2", y: 1868},
+									{label: "KKN", y: 1327},
+									{label: "ITALTHAI", y: 90},
+								]
+							},
+							{
+								type: "column",
+								name: "Null",
+								legendText: "Null",
+								showInLegend: true,
+								dataPoints:[
+									{label: "CP2", y: 100},
+									{label: "TRUE2", y: 250},
+									{label: "KKN", y: 180},
+									{label: "ITALTHAI", y: 50},
+								]
+							}
+						],
+
+
 				legend:{
 				cursor:"pointer",
 				itemclick: function(e){
@@ -156,10 +155,10 @@
 					chart.render();
 				}
         		}
-        		
+
         		});
 				chart.render();
-				
+
 				document.getElementById("adjust").addEventListener("click", function(e) {
 				  var a = document.getElementById("ipn1").value;
 				  var b = document.getElementById("ipn2").value;
@@ -172,11 +171,11 @@
 				  chart.data[0].dataPoints[2].y = parseInt(c);
 				  chart.data[0].dataPoints[3].y = parseInt(d);
 
-				  
+
 				});
 				chart.render();
-				
-				
+
+
 				var chart = new CanvasJS.Chart("chartContainer2",
               {
                 title:{text: "Computer"},
@@ -190,11 +189,11 @@
                  {  y: 2, indexLabel: "ITALTHAI" },
                  ]
                }
-               ] 
-			   
+               ]
+
              });
-			  chart.render();      	
-			 
+			  chart.render();
+
 			 var chart = new CanvasJS.Chart("chartContainer3",
               {
                 title:{text: "AM"},
@@ -209,30 +208,29 @@
                  ]
                }
                ]
-			  
+
              });
 			  chart.render();
-			 
+
 			 var chart = new CanvasJS.Chart("chartContainer4",
               {
                 title:{text: "HS"},
                 data: [
-                {
-                 type: "doughnut",
-                 dataPoints: [
-                 {  y: 53.37, indexLabel: "CP2" },
-                 {  y: 35.0, indexLabel: "TRUE2" },
-                 {  y: 7, indexLabel: "KKN" },
-                 {  y: 2, indexLabel: "ITALTHAI" },
-                 ]
-               }
+	                {
+	                 type: "doughnut",
+	                 dataPoints: [
+			                 {  y: 53.37, indexLabel: "CP2" },
+			                 {  y: 35.0, indexLabel: "TRUE2" },
+			                 {  y: 7, indexLabel: "KKN" },
+			                 {  y: 2, indexLabel: "ITALTHAI" },
+	                 ]
+	               }
                ]
-			   
 			  });
 
-            chart.render();  
-			
-			var chart = new CanvasJS.Chart("chartContainer",
+            chart.render();
+
+			var chart = new CanvasJS.Chart("LineGraphContainer",
 			{
 			  title:{
 				text: "Number of Inventory",
@@ -246,7 +244,7 @@
 				intervalType: "year"
 			  },
 			  axisY:{
-				
+
 			  },
 
 			  legend:{
@@ -264,7 +262,7 @@
 				{ x: new Date(2012, 02, 1), y: 1000},
 				{ x: new Date(2012, 03, 1), y: 1200 },
 				{ x: new Date(2012, 04, 1), y: 1600 },
-				
+
 				]
 			  },
 			  {
@@ -277,7 +275,7 @@
 				{ x: new Date(2012, 02, 1), y: 155},
 				{ x: new Date(2012, 03, 1), y: 150 },
 				{ x: new Date(2012, 04, 1), y: 165 },
-				
+
 
 				]
 			  },
@@ -291,7 +289,7 @@
 				{ x: new Date(2012, 02, 1), y: 55},
 				{ x: new Date(2012, 03, 1), y: 50 },
 				{ x: new Date(2012, 04, 1), y: 65 },
-				
+
 
 				]
 			  },
@@ -306,7 +304,7 @@
 				{ x: new Date(2012, 02, 1), y: 775},
 				{ x: new Date(2012, 03, 1), y: 680 },
 				{ x: new Date(2012, 04, 1), y: 785 },
-				
+
 
 				]
 			  },
@@ -320,7 +318,7 @@
 				{ x: new Date(2012, 02, 1), y: 295},
 				{ x: new Date(2012, 03, 1), y: 300 },
 				{ x: new Date(2012, 04, 1), y: 265 },
-				
+
 
 				]
 			  }
@@ -328,13 +326,11 @@
 			  ]
 			});
 			chart.render();
-        	}
+		}
 
-		
-			
  	</script>
 	</div>
-	</div>	
+	</div>
 	<!--div class="second">
 		<h5><b><i class="fa fa-area-chart"></i><a href="http://localhost/p_inventory/html/pai.php " target="_blank"> Overview COM & HS & AM </b></h5></a>
 		<div id="chartContainer2" style="height: 300px; width: 48%; margin:20px 50%; padding-top:500px;"></div>
@@ -353,7 +349,7 @@
 						horizontalAlign: "center"
 					},
 					data: [
-					{       
+					{
 						type: "pie",
 						showInLegend: true,
 						toolTipContent: "{name}: <strong>{y}%</strong>",
@@ -375,9 +371,9 @@
 	</div>
 
 	</div>
-  	
-	
 
-	
+
+
+
 </body>
 </html>
