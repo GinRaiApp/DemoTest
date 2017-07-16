@@ -89,63 +89,21 @@
 
     </form>
 
-
-
 	<div class="grap" >
-		<div id="BarChartContainer"></div>
-    <!-- <div id="chartContainer" style="margin: 18px; height: 350px; width: 40%; display: inline-block;  "></div> -->
 
-	<div style="background-color:#ccc; display: inline-block; margin: 18px; height: 350px; width: 55%; ">
-		<div id="chartContainer2"></div>
-		<div id="chartContainer3"></div>
-		<div id="chartContainer4"></div>
-	</div>
+			<div id="BarChartContainer"></div>
+
+			<div style="background-color:#ccc; display: inline-block; margin: 18px; height: 350px; width: 55%; ">
+				<div id="chartContainer2"></div>
+				<div id="chartContainer3"></div>
+				<div id="chartContainer4"></div>
+			</div>
+
 	</div>
 	<!-- home jsvascript -->
 	<script type="text/javascript" style="width:100px; color:#4d4d4d;" src="../js/home.js"></script>
 
 	</div>
-	</div>
-	<!-- <div class="second">
-		<h5><b><i class="fa fa-area-chart"></i><a href="http://localhost/p_inventory/html/pai.php " target="_blank"> Overview COM & HS & AM </b></h5></a>
-		<div id="chartContainer2" style="height: 300px; width: 48%; margin:20px 50%; padding-top:500px;"></div>
-		<script type="text/javascript">
-			window.onload = function () {
-				var chart = new CanvasJS.Chart("chartContainer",
-				{
-					title:{
-						text: "Top Categories of New Year's Resolution"
-					},
-					exportFileName: "Pie Chart",
-					exportEnabled: true,
-							animationEnabled: true,
-					legend:{
-						verticalAlign: "bottom",
-						horizontalAlign: "center"
-					},
-					data: [
-					{
-						type: "pie",
-						showInLegend: true,
-						toolTipContent: "{name}: <strong>{y}%</strong>",
-						indexLabel: "{name} {y}%",
-						dataPoints: [
-							{  y: 35, name: "Health", exploded: true},
-							{  y: 20, name: "Finance"},
-							{  y: 18, name: "Career"},
-							{  y: 15, name: "Education"},
-							{  y: 5,  name: "Family"},
-							{  y: 7,  name: "Real Estate"}
-						]
-				}
-				]
-				});
-				chart.render();
-			}
-		</script>
-	</div>
-
-	</div> -->
 
 </body>
 </html>
