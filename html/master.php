@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 	<title>Rental Building Master</title>
 	<meta charset="UTF-8">
@@ -10,21 +10,154 @@
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+table, td, tr, th
+{
+	border-collapse: collapse; 
+	border: 1px solid lightgray; 
+	font-size:2px;
+}
+
+#savebutton {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	text-align:center;
+	font-size:23px;
+}
+
+#primary_nav_wrap
+{
+	margin:15px 15px 15px 15px;
 	
+}
+
+#primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	background-color:#990000;
+   	width:100%;  
+	position: fixed; 
+	top: 0;	
+	left: 0;
+	border-style: none none solid none; 
+	border-width: 5px; 
+	border-color: #4CAF50;
+	
+}
+
+#primary_nav_wrap ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color:#ffffff;
+    font-size: 100%;
+}
+
+#primary_nav_wrap ul li
+{
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+
+
+#primary_nav_wrap ul li:hover
+{
+	background:#f6f6f6
+}
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+#primary_nav_wrap ul ul li
+{
+	float:none;
+	width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block
+}
+
+
+</style>	
 	
 	
 </head>
 
 <body>
 
-	<div class="navbar">
-	  <a href="http://localhost/p_inventory/html/first.php "><b>True Inventory</b></a>
-	  <a href="http://localhost/p_inventory/html/home.php">Report</a>
-	  <a href="http://localhost/p_inventory/html/floor.php">FloorPlan</a>
-	  <a href="http://localhost/p_inventory/html/master.php">Rental Building Master</a>
-	  <a href="http://eus/cm/inventory/index.php#" target="_blank"> CM Inventory </a>
-	</div>
-
+	<nav id="primary_nav_wrap" >
+	<ul>
+	  <li class="current-menu-item "><a href="http://localhost/DemoTest/html/first.php">true inventory</a></li>
+	  <li><a href="http://localhost/DemoTest/html/leftmenu.php" style="border-radius: 4px;">report</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#detailre"> Detail Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
+		</ul>
+	  </li>
+	  <li><a href="http://localhost/DemoTAest/html/floor.php">floor plan</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">Sub Menu 1</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Sub Menu 2</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
+		</ul>
+	  </li>
+	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">Sub Menu 1</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Sub Menu 2</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
+		</ul>
+	  </li>
+	  
+	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
+	  <li><a href="#">Contact Us</a></li>
+	</ul>
+	</nav>
+	
+	
 	
 	<div class="frist"  style="padding-top:100px;text-decoration;">
 	<!-- Header -->
@@ -34,7 +167,7 @@
 	
 	<form class="master">
 		<h2>อัตราค่าบริการ : </h2>
-			<table>
+			<table style="width: 100%;">
 			  <tr style="background-color:gray; color:#ffffff;">
 				<th> อาคาร </th>
 				<th> พื้นที่รวม (ตร.ม.) </th>
@@ -56,525 +189,526 @@
 			  </tr>
 			  <th colspan="17" style="background-color:lightgray;">CP2</th>
 			  <tr>
-				<td><textarea>14</textarea></td>
-				<td><textarea>437</textarea></td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">14</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  
 			  <tr>
-				<td>19</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">19</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
-			  	<tr>
-				<td>20</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+			  <tr>
+				<td style="text-align:center;">20</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
-			  	<tr>
-				<td>21</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
-			  </tr>
-			  	<tr>
-				<td>CP Total</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+			  <tr>
+				<td style="text-align:center;">21</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+			  </tr>	
+			  <tr>
+				<td style="text-align:center;">CP Total</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <th colspan="17" style="background-color:lightgray;">TRUE2</th>
 			  <tr>
-				<td>Building1</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">Building1</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>2</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">2</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>6</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">6</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>7</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">7</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>8</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">8</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>9</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">9</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>10</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">10</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>11</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">11</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>12</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
-			  </tr><tr>
-				<td>14</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">12</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>14</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">14</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>15</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">14</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>Building2</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">15</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>5</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">Building2</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>True2 Total</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">5</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+			  </tr>
+			  <tr>
+				<td style="text-align:center;">True2 Total</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			<th colspan="17" style="background-color:lightgray;">KKN</th>
 			<tr>
-				<td>G</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">G</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>3</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">3</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>4</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">4</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>5</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">5</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>6</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">6</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			  <tr>
-				<td>KKN_Total</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">KKN Total</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 			<th colspan="17" style="background-color:lightgray;">ITALTHAI</th>		
 				<tr>
-				<td>14</td>
-				<td>437</td>
-				<td>93</td>
-				<td>200</td>
-				<td>375</td>
-				<td>-</td>
-				<td>-</td>
-				<td>120</td>
-				<td>-</td>
-				<td>-</td>
-				<td>5.08</td>
-				<td>250</td>
-				<td>21.4</td>
-				<td>695.00</td>
-				<td>762.80</td>
-				<td>4.7</td>
-				<td>3,265.753</td>
+				<td style="text-align:center;">14</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%"></td>
 			  </tr>
 
 			 
 			  <tr style="background-color:gray;">
-				<td>Grand Total</td>
+				<td style="text-align:center;">Grand Total</td>
 				<td>17,282.14</td>
 				<td>4,142.00</td>
 				<th colspan="14" ></th>
@@ -582,13 +716,14 @@
 			 			  
 			</table>
 			
-			<div class="logina " style="border-style:none; background-color:linen; width:100%; margin-left:89%; " onclick="myFunction()"  >
+			<div id="savebutton" onclick="myFunction()"  >
 				<a href="#"  style=" background-color: #4CAF50;  color: white; border-radius: 4px;">
 					  <span class="glyphicon glyphicon-save-file" ></span> Save File / Print
 				</a>
 				
 			</div>
 
+			
 	</form>
 	
 	<script>

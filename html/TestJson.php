@@ -36,7 +36,7 @@
 
       <table class="table" ng-repeat="head in HeaderTable">
       	<tr>
-      		<th>{{head.build}}</th>
+      	  <th>{{head.build}}</th>
           <th>{{head.ground}}</th>
           <th>{{head.seat}}</th>
           <th>{{head.rent_ground}}</th>

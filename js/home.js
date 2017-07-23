@@ -91,37 +91,35 @@
        });
     chart.render();
 
-    var chart = new CanvasJS.Chart("chartContainer3",
-        {
-          title:{text: "AM"},
-          data: [
-          {
-           type: "doughnut",
-           dataPoints: [
-           {  y: 53.37, indexLabel: "CP2" },
-           {  y: 35.0, indexLabel: "TRUE2" },
-           {  y: 7, indexLabel: "KKN" },
-           {  y: 2, indexLabel: "ITALTHAI" },
-           ]
-         }
-         ]
+var chart = new CanvasJS.Chart("chartContainer3",
+    {
+      title:{text: "Amplifier"},
+      data: [
+      {
+       type: "doughnut",
+       dataPoints: [
+       {  y: 15, indexLabel: "CP2" },
+       {  y: 50, indexLabel: "TRUE2" },
+       {  y: 5, indexLabel: "ITALTHAI" },
+       {  y: 30, indexLabel: "KKN" },
+       ]
+     }
+     ]
 
        });
     chart.render();
 
-    var chart = new CanvasJS.Chart("chartContainer4",
+var chart = new CanvasJS.Chart("chartContainer4",
+    {
+      title:{text: "Headset"},
+      data: [
         {
-          title:{text: "HS"},
-          data: [
-            {
-             type: "doughnut",
-             dataPoints: [
-                 {  y: 53.37, indexLabel: "CP2" },
-                 {  y: 35.0, indexLabel: "TRUE2" },
-                 {  y: 7, indexLabel: "KKN" },
-                 {  y: 2, indexLabel: "ITALTHAI" },
-             ]
-           }
+         type: "doughnut",
+         dataPoints: [
+         {  y: 15, indexLabel: "CP2" },
+         {  y: 50, indexLabel: "TRUE2" },
+         {  y: 5, indexLabel: "ITALTHAI" },
+         {  y: 30, indexLabel: "KKN" },
          ]
     });
 
