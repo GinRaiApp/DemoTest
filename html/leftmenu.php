@@ -10,15 +10,8 @@
 	
 
 
-<body>
+<body style="background-color:linen!important;">
 	
-	<div class="frist"  style="width:100%;padding-top:50px;text-decoration; margin:auto;" id="annualre">
-	<!-- Header -->
-    <header class="w3-container" >
-      <h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Annual Report </b></h1>
-			<div id="LineGraphContainer"></div>
-    </header>
-	</div>
 	
 	<nav id="primary_nav_wrap" >
 	<ul>
@@ -26,8 +19,9 @@
 	  <li><a href="http://localhost/DemoTest/html/leftmenu.php" style="border-radius: 4px;">report</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#detailre"> Detail Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#seatre"> Seat Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#devicesre"> Devices Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#overview"> Overview </a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/floor.php">floor plan</a>
@@ -50,11 +44,19 @@
 	</ul>
 	</nav>
 	
+	<div class="frist"  style="width:100%;padding-top:50px;text-decoration; margin:auto;" id="annualre">
+	<!-- Header -->
+    <header class="w3-container" >
+      <h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Annual Report </b></h1>
+			<div id="LineGraphContainer"></div>
+    </header>
+	</div>
 	
-	<div class="clearfix">
 	
-	<form class="finp">
-		<h1><b><i class="fa fa-area-chart w3-xxlarge"></i> Overview Seat </b></h1>
+	<div class="clearfix" style="padding-top:50px;" id="seatre" >
+	
+	<form class="finp" >
+		<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Seat Report </b></h1>
     <div class="column menu">
     <ul>
 		<li><div class="w3-quarter">
@@ -65,7 +67,7 @@
 			  </tr>
 			  <tr>
 				<th>Input Seat Number: </th>
-				<th><input type="number" name="fname" value="0" id="ipn2" style="width:100%;"></th>
+				<th><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></th>
 			  </tr>
 			  <tr>
 				<th>Input Null: </th>
@@ -105,7 +107,7 @@
 			  </tr>
 			  <tr>
 				<th>Input Seat Number: </th>
-				<th><input type="number" name="fname" value="0" id="ipn2" style="width:100%;"></th>
+				<th><input type="number" name="fname" value="0" id="ipn3" style="width:100%;"></th>
 			  </tr>
 			  <tr>
 				<th>Input Null: </th>
@@ -125,7 +127,7 @@
 			  </tr>
 			  <tr>
 				<th>Input Seat Number: </th>
-				<th><input type="number" name="fname" value="0" id="ipn2" style="width:100%;"></th>
+				<th><input type="number" name="fname" value="0" id="ipn4" style="width:100%;"></th>
 			  </tr>
 			  <tr>
 				<th>Input Null: </th>
@@ -148,11 +150,22 @@
     </div>
 	</div>
 	
+	<div  id="devicesre" style="padding-top:50px;">
+	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Devices Report </b></h1>
 	<div class="graphde">
 		<div class="floating-box"><div id="chartContainer2"></div></div>
 		<div class="floating-box"><div id="chartContainer3"></div></div>
 		<div class="floating-box"><div id="chartContainer4"></div></div>
 	</div>
+	</div>
+	
+	
+	<div id="overview" style="padding-top:50px;">
+	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Overview </b></h1>
+		 <div id="100chartContainer" style="height: 550px; width: 80%; margin:auto;"></div>
+	</div>
+	
+	
 	
 	
   

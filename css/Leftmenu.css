@@ -1,5 +1,8 @@
 
-
+body
+{
+	background-color:#ff9999;	
+}
 
 #LineGraphContainer {
   margin: 10px Auto 100px Auto;
@@ -94,11 +97,6 @@
 	display:block
 }
 
-.clearfix
-{
-	margin-top:50px;
-}
-
 
 * {
     box-sizing: border-box;
@@ -159,4 +157,11 @@
 	margin-bottom: 100px;
 	
 }
+
+
+
+
+
+
+
 
