@@ -22,8 +22,8 @@ window.onload = function () {
             dataPoints:[
               {label: "CP2", y: 690},
               {label: "TRUE2", y: 1868},
+              {label: "ITALTHAI", y: 90 },
               {label: "KKN", y: 1327},
-              {label: "ITALTHAI", y: 90},
             ]
           },
           {
@@ -34,8 +34,8 @@ window.onload = function () {
             dataPoints:[
               {label: "CP2", y: 100},
               {label: "TRUE2", y: 250},
-              {label: "KKN", y: 180},
               {label: "ITALTHAI", y: 50},
+              {label: "KKN", y: 180},
             ]
           }
         ],
@@ -77,10 +77,10 @@ var chart = new CanvasJS.Chart("chartContainer2",
       {
        type: "doughnut",
        dataPoints: [
-       {  y: 53.37, indexLabel: "CP2" },
-       {  y: 35.0, indexLabel: "TRUE2" },
-       {  y: 7, indexLabel: "KKN" },
-       {  y: 2, indexLabel: "ITALTHAI" },
+       {  y: 15, indexLabel: "CP2" },
+       {  y: 50, indexLabel: "TRUE2" },
+       {  y: 5, indexLabel: "ITALTHAI" },
+       {  y: 30, indexLabel: "KKN" },
        ]
      }
      ]
@@ -90,15 +90,15 @@ chart.render();
 
 var chart = new CanvasJS.Chart("chartContainer3",
     {
-      title:{text: "AM"},
+      title:{text: "Amplifier"},
       data: [
       {
        type: "doughnut",
        dataPoints: [
-       {  y: 53.37, indexLabel: "CP2" },
-       {  y: 35.0, indexLabel: "TRUE2" },
-       {  y: 7, indexLabel: "KKN" },
-       {  y: 2, indexLabel: "ITALTHAI" },
+       {  y: 15, indexLabel: "CP2" },
+       {  y: 50, indexLabel: "TRUE2" },
+       {  y: 5, indexLabel: "ITALTHAI" },
+       {  y: 30, indexLabel: "KKN" },
        ]
      }
      ]
@@ -108,15 +108,15 @@ chart.render();
 
 var chart = new CanvasJS.Chart("chartContainer4",
     {
-      title:{text: "HS"},
+      title:{text: "Headset"},
       data: [
         {
          type: "doughnut",
          dataPoints: [
-             {  y: 53.37, indexLabel: "CP2" },
-             {  y: 35.0, indexLabel: "TRUE2" },
-             {  y: 7, indexLabel: "KKN" },
-             {  y: 2, indexLabel: "ITALTHAI" },
+         {  y: 15, indexLabel: "CP2" },
+         {  y: 50, indexLabel: "TRUE2" },
+         {  y: 5, indexLabel: "ITALTHAI" },
+         {  y: 30, indexLabel: "KKN" },
          ]
        }
      ]

@@ -5,16 +5,14 @@ h1 {color: maroon; text-align: center; margin: 150px auto 50px auto;}
 p {font-family: "Times New Roman", Times, serif; }
 body {background-color: linen;}
 span {font-family: "Times New Roman", Times, serif; font-size: 20px; }
-table, td, th {border-collapse: collapse; border: 1px dotted black;}
-textarea {background-color:none;box-sizing: border-box; border: 2px solid #ccc;}
 
-div.logina{width: 20%; border-radius: 5px;  padding: 10px 20px 20px 20px;  margin: auto;}
+div.logina{width: 98%; border-radius: 5px;  padding: 10px 20px 20px 20px;  margin: auto;}
 div.buttonf{width: 50%; border-radius: 5px; padding: 20px; margin: auto;}
 
 img.fp1 { display: block; margin-left:20px; padding:50px 10px 50px 10px; float:left;}
 
 	
-input[type=text], select { width: 100%; padding: 5px 20px; margin: 5px 0;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+select { width: 100%; padding: 5px 20px; margin: 5px 0;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
 input[type=submit] { width: 100%; background-color: #4CAF50; color: white;  padding: 8px 20px;  margin: 13px 0; border: none;  border-radius: 4px; cursor: pointer;}
 input[type=submit]:hover { background-color: #45a049;}
 #adjust, #rs{background-color: #4CAF50;  color: white; border-radius: 4px;}
@@ -22,15 +20,12 @@ input[type=submit]:hover { background-color: #45a049;}
 a { text-decoration: none; display: inline-block; padding: 8px 16px;}
 a:hover {  background-color: #ddd;  color: black;}
 
-.previous {margin: auto; width: 100%;   background-color: #4CAF50;  color: white;	padding: 14px 20px;  margin: 8px 0;	text-align: center; border-radius: 4px;}
-.next {margin: auto;width: 100%;background-color: #4CAF50; color: white;cursor: pointer;padding: 14px 20px; margin: 8px 0;text-align: center; border-radius: 4px;}
 .taptop{color: white;	font-family: "Times New Roman", Times, serif;  font-size: 20px;}	
 .box{	border-radius: 8px;}
 .second {padding-top:50px;text-decoration; padding: 50px 16px;}
 .navbar { overflow: hidden;background-color: #990000; position: fixed; top: 0; width: 100%; border-style: none none solid none; border-width: 5px; border-color: #4CAF50;}
-.navbar a { float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 18px; }
 .main { padding: 16px; margin-top: 30px; height: 1500px; /* Used in this example to enable scrolling */}
-.master {padding: 0 16px 16px 16px; }
+.master {padding: 0 16px 16px 16px; width:90%; }
 .bps {padding-top:10px;}
 
 .flex-container {margin: 0px 18px; padding: 0px 16px 16px 16px; display: -webkit-flex; display: flex; width: 98%; }
@@ -51,10 +46,6 @@ a:hover {  background-color: #ddd;  color: black;}
 .cycle2 {border-color: #cc3300; background-color:#ff9999; border-radius: 100%; width:20%;  height:300px; margin:50px 45px 50px 45px; background-image: url("http://localhost/p_inventory/photos/t22.jpg");}
 .cycle3 {border-color: #cc3300; background-color:#ff9999; border-radius: 100%; width:20%;  height:300px; margin:50px 45px 50px 45px; background-image: url("http://localhost/p_inventory/photos/kkn.jpg");}
 .cycle4 {border-color: #cc3300; background-color:#ff9999; border-radius: 100%; width:20%;  height:300px; margin:50px 45px 50px 45px; background-image: url("http://localhost/p_inventory/photos/it6.jpg");  background-position: center; }
-
-
-
-
 
 
 
