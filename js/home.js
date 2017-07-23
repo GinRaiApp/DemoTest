@@ -1,6 +1,6 @@
-// window.onload = function () {
-  $(document).ready(function(){
-    $.getJSON("testdb.php", function(result){
+window.onload = function () {
+  // $(document).ready(function(){
+  //   $.getJSON("testdb.php", function(result){
       var chart = new CanvasJS.Chart("BarChartContainer", {
             title:{text: "Total Seat"},
             theme: "theme3",
@@ -78,13 +78,14 @@
           data: [
           {
            type: "doughnut",
-           dataPoints: result
-          //  [
-          //    {  y: 53.37, indexLabel: "CP2" },
-          //    {  y: 35.0, indexLabel: "TRUE2" },
-          //    {  y: 7, indexLabel: "KKN" },
-          //    {  y: 2, indexLabel: "ITALTHAI" },
-          //  ]
+           dataPoints:
+          //  result
+           [
+             {  y: 53.37, indexLabel: "CP2" },
+             {  y: 35.0, indexLabel: "TRUE2" },
+             {  y: 7, indexLabel: "KKN" },
+             {  y: 2, indexLabel: "ITALTHAI" },
+           ]
          }
          ]
 
@@ -121,6 +122,7 @@ var chart = new CanvasJS.Chart("chartContainer4",
          {  y: 5, indexLabel: "ITALTHAI" },
          {  y: 30, indexLabel: "KKN" },
          ]
+       }]
     });
 
       chart.render();
@@ -212,6 +214,6 @@ var chart = new CanvasJS.Chart("chartContainer4",
         ]
     });
     chart.render();
-  });
-  });
-// }
+  // });
+  // });
+}
