@@ -273,14 +273,14 @@ span.psw {
    
     
 	<div>
-	<form action="http://localhost/DemoTest/html/leftmenu.php">
+	<form action="../html/checklogin.php" method="POST">
 	  
 	  <div class="container">
 		<label><b>Username</b></label>
-		<input type="text" placeholder="Input User Name.." name="uname" required>
+		<input type="text" placeholder="Input User Name.." id="uname" name="uname" required>
 
 		<label><b>Password</b></label>
-		<input type="password" placeholder="Input User Password.." name="psw" required>
+		<input type="password" placeholder="Input User Password.." id="psw" name="psw" required>
 			
 		<button type="submit" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 		<input type="checkbox" checked="checked"> Remember me
@@ -288,13 +288,7 @@ span.psw {
 	</form>
 	</div>
 	
-	<div id="id01" class="modal">
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="container">     
-		<p>Cholticha Login completes !!!</p>      
-		</div>
-      </form>
-	<div>
+
 	
   	
 	
