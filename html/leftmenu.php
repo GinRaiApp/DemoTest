@@ -6,13 +6,11 @@
 	<script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<script type="text/javascript" src="../js/home.js"></script>
-	<link rel="stylesheet" type="text/css" href="/DemoTest/css/Leftmenu.css">
-	
-
+	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
 
 <body style="background-color:linen!important;">
-	
-	
+
+
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/first.php">true inventory</a></li>
@@ -38,12 +36,12 @@
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
-	  
+
 	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
 	  <li><a href="../html/contact.php#">Contact Us</a></li>
 	</ul>
 	</nav>
-	
+
 	<div class="frist"  style="width:100%;padding-top:50px;text-decoration; margin:auto;" id="annualre">
 	<!-- Header -->
     <header class="w3-container" >
@@ -51,6 +49,7 @@
 			<div id="LineGraphContainer"></div>
     </header>
 	</div>
+<<<<<<< HEAD
 	
 	
 	<div id="overview" style="padding-top:50px;">
@@ -60,8 +59,12 @@
 	
 	
 	
+=======
+
+
+>>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
 	<div class="clearfix" style="padding-top:50px;" id="seatre" >
-	
+
 	<form class="finp" >
 		<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Seat Report </b></h1>
     <div class="column menu">
@@ -82,10 +85,10 @@
 			  </tr>
 			  </table>
             </div>
-			
+
           </div>
 		</li>
-		
+
 		<li><div class="w3-quarter">
             <div class="w3-container  w3-padding-16 box" id="icp2" style="background-color:#ffe699;">
               <table style="width:100%">
@@ -102,10 +105,10 @@
 			  </tr>
 			  </table>
             </div>
-			
+
           </div>
 		</li>
-		
+
 		<li><div class="w3-quarter">
             <div class="w3-container w3-padding-16 box" id="ikkn" style="background-color:#ffccf3;">
               <table style="width:100%">
@@ -124,8 +127,8 @@
             </div>
           </div>
 		</li>
-		
-		
+
+
 		<li><div class="w3-quarter">
             <div class="w3-container w3-padding-16 box" id="ikkn" style="background-color:#ccffff;">
               <table style="width:100%">
@@ -144,20 +147,25 @@
             </div>
           </div>
 		</li>
-	</ul>	
+	</ul>
 		<div>
 		    <button id="adjust" type="button" style="margin-left:20px"> Adjust </button>
 			<input type="reset" value="Reset" id="rs">
       	</div>
-	
+
     </div>
     </form>
 	<div class="grap" style="width:60%; float: right; margin-right:10%;">
 		<div id="BarChartContainer" style="height:468px; padding-top:10px;"></div>
     </div>
 	</div>
+<<<<<<< HEAD
 	
 	<div  id="devicesre" style="padding-top:30px;">
+=======
+
+	<div  id="devicesre" style="padding-top:50px;">
+>>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
 	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Devices Report </b></h1>
 	<div class="graphde">
 		<div class="floating-box"><div id="chartContainer2"></div></div>
@@ -165,6 +173,7 @@
 		<div class="floating-box"><div id="chartContainer4"></div></div>
 	</div>
 	</div>
+<<<<<<< HEAD
 	
 	
 
@@ -173,6 +182,16 @@
 	
   
   
+=======
+
+
+	<div id="overview" style="padding-top:50px;">
+	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Overview </b></h1>
+		 <div id="100chartContainer" style="height: 550px; width: 80%; margin:auto;"></div>
+	</div>
+
+
+>>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
 </body>
 
 </html>
