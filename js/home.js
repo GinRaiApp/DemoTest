@@ -1,205 +1,6 @@
 window.onload = function () {
-  var chart = new CanvasJS.Chart("BarChartContainer", {
-        title:{text: "Total Seat"},
-        theme: "theme3",
-        animationEnabled: true,
-        toolTip: {
-            shared: true
-        },
-        axisY: {
-            title: "Seat"
-        },
-        axisX: {
-            title: "Building"
-        },
-        data: [
-            {
-            type: "column",
-            name: "Seat Total",
-            legendText: "Seat Total",
-            indexLabel: "{y}",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: 690},
-              {label: "TRUE2", y: 1868},
-              {label: "ITALTHAI", y: 90 },
-              {label: "KKN", y: 1327},
-            ]
-          },
-          {
-            type: "column",
-            name: "Null",
-            legendText: "Null",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: 100},
-              {label: "TRUE2", y: 250},
-              {label: "ITALTHAI", y: 50},
-              {label: "KKN", y: 180},
-            ]
-          }
-        ],
-
-    legend:{
-    cursor:"pointer",
-    itemclick: function(e){
-          if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
-          }
-          else {
-            e.dataSeries.visible = true;
-          }
-            chart.render();
-      }
-    }
-});
-chart.render();
-
-// document.getElementById("adjust").addEventListener("click", function(e) {
-// 	console.log('testclick');
-//     var a = document.getElementById("ipn1").value;
-//     var b = document.getElementById("ipn2").value;
-//     var c = document.getElementById("ipn3").value;
-//     var d = document.getElementById("ipn4").value;
-//
-//     console.log(typeof a)
-//     chart.data[0].dataPoints[0].y = parseInt(a);
-//     chart.data[0].dataPoints[1].y = parseInt(b);
-//     chart.data[0].dataPoints[2].y = parseInt(c);
-//     chart.data[0].dataPoints[3].y = parseInt(d);
-// 	console.log(chart.data[0].dataPoints[0].y);
-// });
-// chart.render();
-
-function makeChart(){
-  var a = document.getElementById("ipn1").value;
-  var b = document.getElementById("ipn2").value;
-  var c = document.getElementById("ipn3").value;
-  var d = document.getElementById("ipn4").value;
-
-  console.log(typeof a)
-  var getA = parseInt(a);
-  var getB = parseInt(b);
-  var getC = parseInt(c);
-  var getD = parseInt(d);
-
-  chart = new CanvasJS.Chart("BarChartContainer", {
-        title:{text: "Total Seat"},
-        theme: "theme3",
-        animationEnabled: true,
-        toolTip: {
-            shared: true
-        },
-        axisY: {
-            title: "Seat"
-        },
-        axisX: {
-            title: "Building"
-        },
-        data: [
-            {
-            type: "column",
-            name: "Seat Total",
-            legendText: "Seat Total",
-            indexLabel: "{y}",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: getA},
-              {label: "TRUE2", y: getB},
-              {label: "ITALTHAI", y: getC },
-              {label: "KKN", y: getD},
-            ]
-          },
-          {
-            type: "column",
-            name: "Null",
-            legendText: "Null",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: 100},
-              {label: "TRUE2", y: 250},
-              {label: "ITALTHAI", y: 50},
-              {label: "KKN", y: 180},
-            ]
-          }
-        ],
-
-        legend:{
-        cursor:"pointer",
-        itemclick: function(e){
-              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                e.dataSeries.visible = false;
-              }
-              else {
-                e.dataSeries.visible = true;
-              }
-                chart.render();
-          }
-        }
-      });
-  chart.render();
-}
-//click button call function makechart
-var runButton = document.getElementById("adjust");
-runButton.addEventListener("click", makeChart);
-
-
-var chart = new CanvasJS.Chart("chartContainer2",
-    {
-      title:{text: "Computer"},
-      data: [
-      {
-       type: "doughnut",
-       dataPoints: [
-       {  y: 15, indexLabel: "CP2" },
-       {  y: 50, indexLabel: "TRUE2" },
-       {  y: 5, indexLabel: "ITALTHAI" },
-       {  y: 30, indexLabel: "KKN" },
-       ]
-     }
-     ]
-
-   });
-chart.render();
-
-var chart = new CanvasJS.Chart("chartContainer3",
-    {
-      title:{text: "Amplifier"},
-      data: [
-      {
-       type: "doughnut",
-       dataPoints: [
-       {  y: 15, indexLabel: "CP2" },
-       {  y: 50, indexLabel: "TRUE2" },
-       {  y: 5, indexLabel: "ITALTHAI" },
-       {  y: 30, indexLabel: "KKN" },
-       ]
-     }
-     ]
-
-   });
-chart.render();
-
-var chart = new CanvasJS.Chart("chartContainer4",
-    {
-      title:{text: "Headset"},
-      data: [
-        {
-         type: "doughnut",
-         dataPoints: [
-         {  y: 15, indexLabel: "CP2" },
-         {  y: 50, indexLabel: "TRUE2" },
-         {  y: 5, indexLabel: "ITALTHAI" },
-         {  y: 30, indexLabel: "KKN" },
-         ]
-       }
-     ]
-});
-
-  chart.render();
-
-
-
+	
+	//Annual Report
 var chart = new CanvasJS.Chart("LineGraphContainer",
 {
     title:{
@@ -286,12 +87,208 @@ var chart = new CanvasJS.Chart("LineGraphContainer",
 });
 chart.render();
 
+	
+	
+	
+//	Seat Report
+  var chart = new CanvasJS.Chart("BarChartContainer", {
+        title:{text: "Total Seat"},
+        theme: "theme3",
+        animationEnabled: true,
+        toolTip: {
+            shared: true
+        },
+        axisY: {
+            title: "Seat"
+        },
+        axisX: {
+            title: "Building"
+        },
+        data: [
+            {
+            type: "column",
+            name: "Seat Total",
+            legendText: "Seat Total",
+            indexLabel: "{y}",
+            showInLegend: true,
+            dataPoints:[
+              {label: "CP2", y: 690},
+              {label: "TRUE2", y: 1868},
+              {label: "ITALTHAI", y: 90 },
+              {label: "KKN", y: 1327},
+            ]
+          },
+          {
+            type: "column",
+            name: "Null",
+            legendText: "Null",
+            showInLegend: true,
+            dataPoints:[
+              {label: "CP2", y: 100},
+              {label: "TRUE2", y: 250},
+              {label: "ITALTHAI", y: 50},
+              {label: "KKN", y: 180},
+            ]
+          }
+        ],
+
+    legend:{
+    cursor:"pointer",
+    itemclick: function(e){
+          if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+          }
+          else {
+            e.dataSeries.visible = true;
+          }
+            chart.render();
+      }
+    }
+});
+chart.render();
 
 
+
+function makeChart(){
+  var a = document.getElementById("ipn1").value;
+  var b = document.getElementById("ipn2").value;
+  var c = document.getElementById("ipn3").value;
+  var d = document.getElementById("ipn4").value;
+
+  console.log(typeof a)
+  var getA = parseInt(a);
+  var getB = parseInt(b);
+  var getC = parseInt(c);
+  var getD = parseInt(d);
+
+  chart = new CanvasJS.Chart("BarChartContainer", {
+        title:{text: "Total Seat"},
+        theme: "theme3",
+        animationEnabled: true,
+        toolTip: {
+            shared: true
+        },
+        axisY: {
+            title: "Seat"
+        },
+        axisX: {
+            title: "Building"
+        },
+        data: [
+            {
+            type: "column",
+            name: "Seat Total",
+            legendText: "Seat Total",
+            indexLabel: "{y}",
+            showInLegend: true,
+            dataPoints:[
+              {label: "CP2", y: getA},
+              {label: "TRUE2", y: getB},
+              {label: "ITALTHAI", y: getC },
+              {label: "KKN", y: getD},
+            ]
+          },
+          {
+            type: "column",
+            name: "Null",
+            legendText: "Null",
+            showInLegend: true,
+            dataPoints:[
+              {label: "CP2", y: 100},
+              {label: "TRUE2", y: 250},
+              {label: "ITALTHAI", y: 50},
+              {label: "KKN", y: 180},
+            ]
+          }
+        ],
+
+        legend:{
+        cursor:"pointer",
+        itemclick: function(e){
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+                chart.render();
+          }
+        }
+      });
+  chart.render();
+}
+//click button call function makechart
+var runButton = document.getElementById("adjust");
+runButton.addEventListener("click", makeChart);
+
+
+
+
+
+
+//Devices Report
+var chart = new CanvasJS.Chart("chartContainer2",
+    {
+      title:{text: "Computer"},
+      data: [
+      {
+       type: "doughnut",
+       dataPoints: [
+       {  y: 15, indexLabel: "CP2" },
+       {  y: 50, indexLabel: "TRUE2" },
+       {  y: 5, indexLabel: "ITALTHAI" },
+       {  y: 30, indexLabel: "KKN" },
+       ]
+     }
+     ]
+
+   });
+chart.render();
+
+var chart = new CanvasJS.Chart("chartContainer3",
+    {
+      title:{text: "Amplifier"},
+      data: [
+      {
+       type: "doughnut",
+       dataPoints: [
+       {  y: 15, indexLabel: "CP2" },
+       {  y: 50, indexLabel: "TRUE2" },
+       {  y: 5, indexLabel: "ITALTHAI" },
+       {  y: 30, indexLabel: "KKN" },
+       ]
+     }
+     ]
+
+   });
+chart.render();
+
+var chart = new CanvasJS.Chart("chartContainer4",
+    {
+      title:{text: "Headset"},
+      data: [
+        {
+         type: "doughnut",
+         dataPoints: [
+         {  y: 15, indexLabel: "CP2" },
+         {  y: 50, indexLabel: "TRUE2" },
+         {  y: 5, indexLabel: "ITALTHAI" },
+         {  y: 30, indexLabel: "KKN" },
+         ]
+       }
+     ]
+});
+
+  chart.render();
+
+
+
+
+//Devices Report
     var chart = new CanvasJS.Chart("100chartContainer",
     {
       title:{
-      text: "Number of Students in Each Room"
+      text: "Number of Overview"
       },
 
       data: [
