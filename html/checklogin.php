@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+ body, a
+ {
+	 padding-top:50px;
+	 width:50%;
+	 margin:auto;
+	 font-size:1.5em;
+	 background-color: lightgray;
+ }
+</style>
+</head>
+<body>
 <?php
 	$username = $_POST['uname'];
 	$password = $_POST['psw'];
@@ -15,9 +30,23 @@
 				or die("Failed to query database ".mysql_error());
 	$row = mysql_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password){
-		echo "Login success!!!  Welcome ".$row['name']." ".$row['surname'].", You is: ".$row['agent_level'];
+		echo "<script> 
+		alert('Login Successfully !!!!!!! '); 
+		window.location.href='../html/leftmenu.php'; 
+		</script>";
+		
+		
+		
 	} else {
-		echo "Failed to login!!";
+		echo "<script> 
+		alert('Login Failed'); 
+		window.location.href='../html/first.php'; 
+		</script>";
 	}
 
 ?>
+
+	
+	
+</body>
+</html>

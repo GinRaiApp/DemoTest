@@ -4,16 +4,18 @@
 	<title>contact us</title>
 	<link rel="stylesheet" type="text/css" href="/DemoTest/css/Leftmenu.css">
 	<style>
-	input[type=text],input[type=email] {
+	input[type=text],input[type=email], input[type=date] {
 		width: 100%;
 		padding: 8px 18px;
-		margin: 8px 0;
+		margin: 5px 0;
 		box-sizing: border-box;
+		border: 2px solid #ccc;
+		border-radius: 4px;
 	}
 	
 	textarea {
 		width: 100%;
-		height: 150px;
+		height: 100px;
 		padding: 12px 20px;
 		box-sizing: border-box;
 		border: 2px solid #ccc;
@@ -31,7 +33,7 @@
     background-color: #f1f1f1;
 	}
 	
-	input[type=button], input[type=submit], input[type=reset] {
+	input[type=submit]{
 		background-color: #4CAF50;
 		border: none;
 		color: white;
@@ -42,9 +44,9 @@
 		border-radius: 4px;
 	}
 	
-	input[type=button]:hover{background-color: lightgray;} 
+	
 	input[type=submit]:hover{background-color: lightgray;} 
-	input[type=reset]:hover{background-color: lightgray;}
+	
 	
 	</style>
 </head>
@@ -82,13 +84,15 @@
 
 
 
-	<div class="contactus" style="width:50%; margin:auto; padding-top:30px; ">
+	<div class="contactus" style="width:50%; margin:50px auto; padding:20px; background-color:#e6e6e6;	border: 2px dashed red; border-radius: 12px;">
 		<h1>CONTACT US</h1>
 		
 		<div class="name">
-		<p>
 		<h2>Information User:</h2>
-		<form>
+		<form action="savecontact.php" name="frmAdd" method="post" target="iframe_target">
+		
+			<label for="fname">Date:</label>
+			<input type="date" id="date" name="date">
 			<label for="fname">First Name:</label>
 			<input type="text" id="fname" name="fname">
 			<label for="lname">Last Name:</label>
@@ -98,35 +102,43 @@
 			<label for="phone">Phone Number:</label>
 			<input type="text" id="phone" name="phone"> 
 			<p>Please select about:
-			<form>
-			  <select id="type" name="country">
+			<select id="type" name="job">
 				<option value="sample"><----Please Choose----></option>
-				<option value="au">IT</option>
-				<option value="ca">Suppoer</option>
-				<option value="usa">Other</option>
-			  </select>
-			</p>
-			</form>   
-		</form>
-		
-		</div>
-		
+				<option value="IT">IT</option>
+				<option value="Suppoer">Suppoer</option>
+				<option value="Other">Other</option>
+			</select>
+	
 				
 		<div ="comment">
 		<p><strong>Comment:</strong></p>
-		<form>
-		  <textarea>Some text...</textarea>
-		</form>
+		<textarea name="comment">Some text...</textarea>
 		</div>
 
 		
 		<div class="3button">
-		<input type="reset" value="Reset">
-		<input type="submit" value="Submit">
+		<input type="submit" name="submit" value="submit">
 		</div>
-	
-	
+		
+		</form>
+		
+		</div>
 	</div>
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+	
+	
 	
 	
 </body>

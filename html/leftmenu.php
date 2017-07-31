@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-
+<head>
 <title>Left Menu</title>
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<script type="text/javascript" src="../js/home.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
-
+</head>
 <body style="background-color:linen!important;">
 
 
@@ -49,8 +49,7 @@
 			<div id="LineGraphContainer"></div>
     </header>
 	</div>
-<<<<<<< HEAD
-	
+
 	
 	<div id="overview" style="padding-top:50px;">
 	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Overview </b></h1>
@@ -59,10 +58,7 @@
 	
 	
 	
-=======
 
-
->>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
 	<div class="clearfix" style="padding-top:50px;" id="seatre" >
 
 	<form class="finp" >
@@ -159,13 +155,13 @@
 		<div id="BarChartContainer" style="height:468px; padding-top:10px;"></div>
     </div>
 	</div>
-<<<<<<< HEAD
+
 	
 	<div  id="devicesre" style="padding-top:30px;">
-=======
+
 
 	<div  id="devicesre" style="padding-top:50px;">
->>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
+
 	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Devices Report </b></h1>
 	<div class="graphde">
 		<div class="floating-box"><div id="chartContainer2"></div></div>
@@ -173,25 +169,14 @@
 		<div class="floating-box"><div id="chartContainer4"></div></div>
 	</div>
 	</div>
-<<<<<<< HEAD
+
 	
 	
 
 	
-	
-	
-  
-  
-=======
 
 
-	<div id="overview" style="padding-top:50px;">
-	<h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Overview </b></h1>
-		 <div id="100chartContainer" style="height: 550px; width: 80%; margin:auto;"></div>
-	</div>
 
-
->>>>>>> ce4e72f6fc891cc6eb3451abe0d77f6733bdca4b
 </body>
 
 </html>
