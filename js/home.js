@@ -20,10 +20,10 @@ window.onload = function () {
             indexLabel: "{y}",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: 690},
-              {label: "TRUE2", y: 1868},
-              {label: "ITALTHAI", y: 90 },
-              {label: "KKN", y: 1327},
+              {label: "CP2", y: rowsGroupC},
+              {label: "TRUE2", y: rowsGroupI},
+              {label: "ITALTHAI", y: rowsGroupT },
+              {label: "KKN", y: rowsGroupK},
             ]
           },
           {
@@ -218,7 +218,7 @@ var chart = new CanvasJS.Chart("LineGraphContainer",
       verticalAlign: "bottom",
       horizontalAlign: "center"
     },
-	
+
     data: [
     {
       type: "stackedArea",

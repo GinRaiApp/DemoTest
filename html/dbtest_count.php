@@ -2,8 +2,6 @@
 <head>
 	<title>DB test</title>
 </head>
-<body>
-
 <?php
 
 $link = mysql_connect("localhost", "root", "Password*1234");
@@ -35,6 +33,15 @@ echo "Seat total: $num_rows_group Rows <br>
 */
 
 ?>
+<script type="text/javascript">
+	var rowsGroupC = <?= $num_rows_group_C ?>;
+	var rowsGroupI = <?= $num_rows_group_I ?>;
+	var rowsGroupT = <?= $num_rows_group_T ?>;
+	var rowsGroupK = <?= $num_rows_group_K ?>;
+</script>
+<script type="text/javascript" src="../js/home.js"></script>
+<body>
+
 	<table width="600" border="1" cellpadding="1" cellspacing="1" align='center' width='500'>
 	<tr align='center' bgcolor='#CCCCCC'>
 		<th>Name</th>
