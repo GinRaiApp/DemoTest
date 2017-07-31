@@ -87,9 +87,6 @@ var chart = new CanvasJS.Chart("LineGraphContainer",
 });
 chart.render();
 
-
-
-
 //	Seat Report
   var chart = new CanvasJS.Chart("BarChartContainer", {
         title:{text: "Total Seat"},
@@ -112,10 +109,10 @@ chart.render();
             indexLabel: "{y}",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: rowsGroupC},
-              {label: "TRUE2", y: rowsGroupI},
-              {label: "ITALTHAI", y: rowsGroupT },
-              {label: "KKN", y: rowsGroupK},
+              {label: "CP2", y: 690},
+              {label: "TRUE2", y: 1868},
+              {label: "ITALTHAI", y: 90 },
+              {label: "KKN", y: 1327},
             ]
           },
           {
@@ -280,6 +277,9 @@ var chart = new CanvasJS.Chart("chartContainer4",
 });
 
   chart.render();
+
+
+
 
 //Devices Report
     var chart = new CanvasJS.Chart("100chartContainer",
