@@ -112,10 +112,10 @@ chart.render();
             indexLabel: "{y}",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: 690},
-              {label: "TRUE2", y: 1868},
-              {label: "ITALTHAI", y: 90 },
-              {label: "KKN", y: 1327},
+              {label: "CP2", y: rowsGroupC},
+              {label: "TRUE2", y: rowsGroupI},
+              {label: "ITALTHAI", y: rowsGroupT },
+              {label: "KKN", y: rowsGroupK},
             ]
           },
           {
@@ -283,6 +283,96 @@ var chart = new CanvasJS.Chart("chartContainer4",
 
 
 
+<<<<<<< HEAD
+=======
+var chart = new CanvasJS.Chart("LineGraphContainer",
+{
+    title:{
+      text: "Number of Inventory",
+      margin: 15
+    },
+    theme: "theme2",
+      animationEnabled: true,
+      axisX: {
+        valueFormatString: "YYYY",
+        interval : 1,
+        intervalType: "year"
+      },
+
+    legend:{
+      verticalAlign: "bottom",
+      horizontalAlign: "center"
+    },
+
+    data: [
+    {
+      type: "stackedArea",
+      name: "Awaya",
+      showInLegend: true,
+      dataPoints: [
+        { x: new Date(2013, 00, 1), y: 1100 },
+        { x: new Date(2014, 00, 1), y: 1200 },
+        { x: new Date(2015, 00, 1), y: 1000},
+        { x: new Date(2016, 00, 1), y: 1200 },
+        { x: new Date(2017, 00, 1), y: 1600 }
+      ]
+    },
+    {
+      type: "stackedArea",
+      name: "Headset",
+      showInLegend: true,
+      dataPoints: [
+        { x: new Date(2013, 00, 1), y: 150 },
+        { x: new Date(2014, 00, 1), y: 171 },
+        { x: new Date(2015, 00, 1), y: 155},
+        { x: new Date(2016, 00, 1), y: 150 },
+        { x: new Date(2017, 00, 1), y: 165 }
+      ]
+    },
+    {
+      type: "stackedArea",
+      name: "Amplifies",
+      showInLegend: true,
+      dataPoints: [
+        { x: new Date(2013, 00, 1), y: 71 },
+        { x: new Date(2014, 00, 1), y: 41 },
+        { x: new Date(2015, 00, 1), y: 55},
+        { x: new Date(2016, 00, 1), y: 50 },
+        { x: new Date(2017, 00, 1), y: 65 }
+      ]
+    },
+
+    {
+      type: "stackedArea",
+      name: "Computer",
+      showInLegend: true,
+      dataPoints: [
+          { x: new Date(2013, 00, 1), y: 861 },
+          { x: new Date(2014, 00, 1), y: 761 },
+          { x: new Date(2015, 00, 1), y: 775},
+          { x: new Date(2016, 00, 1), y: 680 },
+          { x: new Date(2017, 00, 1), y: 785 }
+      ]
+    },
+    {
+      type: "stackedArea",
+      name: "Seat",
+      showInLegend: true,
+      dataPoints: [
+          { x: new Date(2013, 00, 1), y: 220 },
+          { x: new Date(2014, 00, 1), y: 240 },
+          { x: new Date(2015, 00, 1), y: 295},
+          { x: new Date(2016, 00, 1), y: 300 },
+          { x: new Date(2017, 00, 1), y: 265 }
+      ]
+    }
+
+    ]
+});
+chart.render();
+
+
+>>>>>>> d8be333e87366a0d26d090f1caa6e1c01cf8c4af
 
 //Devices Report
     var chart = new CanvasJS.Chart("100chartContainer",
