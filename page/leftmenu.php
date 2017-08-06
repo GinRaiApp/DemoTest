@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript" src="../js/AllChart.js"></script>
     <script type="text/javascript" src="../lib/angular.min.js"></script>
     <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
 
@@ -48,7 +49,7 @@
     	</nav>
 
       <!-- controller -->
-      <div ng-app="myApp" ng-controller="myCtrl" ng-init="displayData()">
+      <div ng-app="myApp" ng-controller="myCtrl" ng-init="displayData(); fn1()" id="myData">
 
         <div class="frist"  style="width:100%;padding-top:50px;text-decoration; margin:auto;" id="annualre">
       	<!-- Header -->
@@ -177,7 +178,6 @@
       </div> <!--controller close tag-->
     </div> <!--container close tag-->
   </body>
-    <script type="text/javascript" src="../js/AllChart.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../lib/canvasjs.min.js"></script>
     <script type="text/javascript" src="../lib/jquery.canvasjs.min.js"></script>

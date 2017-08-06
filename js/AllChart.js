@@ -87,64 +87,7 @@ var chart = new CanvasJS.Chart("LineGraphContainer",
 });
 chart.render();
 
-//	Seat Report
-  var chart = new CanvasJS.Chart("BarChartContainer", {
-        title:{text: "Total Seat"},
-        theme: "theme3",
-        animationEnabled: true,
-        toolTip: {
-            shared: true
-        },
-        axisY: {
-            title: "Seat"
-        },
-        axisX: {
-            title: "Building"
-        },
-        data: [
-            {
-            type: "column",
-            name: "Seat Total",
-            legendText: "Seat Total",
-            indexLabel: "{y}",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: 690},
-              {label: "TRUE2", y: 1868},
-              {label: "ITALTHAI", y: 90 },
-              {label: "KKN", y: 1327},
-            ]
-          },
-          {
-            type: "column",
-            name: "Null",
-            legendText: "Null",
-            showInLegend: true,
-            dataPoints:[
-              {label: "CP2", y: 100},
-              {label: "TRUE2", y: 250},
-              {label: "ITALTHAI", y: 50},
-              {label: "KKN", y: 180},
-            ]
-          }
-        ],
-
-    legend:{
-    cursor:"pointer",
-    itemclick: function(e){
-          if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
-          }
-          else {
-            e.dataSeries.visible = true;
-          }
-            chart.render();
-      }
-    }
-});
-chart.render();
-
-
+//-------	Seat Report render on app.js -----//
 
 function makeChart(){
   var a = document.getElementById("ipn1").value;
@@ -218,11 +161,6 @@ function makeChart(){
 var runButton = document.getElementById("adjust");
 runButton.addEventListener("click", makeChart);
 
-
-
-
-
-
 //Devices Report
 var chart = new CanvasJS.Chart("chartContainer2",
     {
@@ -289,48 +227,45 @@ var chart = new CanvasJS.Chart("chartContainer4",
       },
 
       data: [
-      {
-        type: "stackedColumn100",
-        dataPoints: [
-        {  y: 40, label: "CP2"},
-        {  y: 10, label: "ITALTHAI" },
-        {  y: 72, label: "TRUE2" },
-        {  y: 30, label: "KKN" },
+                {
+                  type: "stackedColumn100",
+                  dataPoints: [
+                  {  y: 40, label: "CP2"},
+                  {  y: 10, label: "ITALTHAI" },
+                  {  y: 72, label: "TRUE2" },
+                  {  y: 30, label: "KKN" },
 
-        ]
-      }, {
-        type: "stackedColumn100",
-        dataPoints: [
-        {  y: 40, label: "CP2"},
-        {  y: 10, label: "ITALTHAI" },
-        {  y: 72, label: "TRUE2" },
-        {  y: 30, label: "KKN" },
+                  ]
+                }, {
+                  type: "stackedColumn100",
+                  dataPoints: [
+                  {  y: 40, label: "CP2"},
+                  {  y: 10, label: "ITALTHAI" },
+                  {  y: 72, label: "TRUE2" },
+                  {  y: 30, label: "KKN" },
 
-        ]
-      },
-	    {
-        type: "stackedColumn100",
-        dataPoints: [
-        {  y: 40, label: "CP2"},
-        {  y: 10, label: "ITALTHAI" },
-        {  y: 72, label: "TRUE2" },
-        {  y: 30, label: "KKN" },
+                  ]
+                },
+          	    {
+                  type: "stackedColumn100",
+                  dataPoints: [
+                  {  y: 40, label: "CP2"},
+                  {  y: 10, label: "ITALTHAI" },
+                  {  y: 72, label: "TRUE2" },
+                  {  y: 30, label: "KKN" },
 
-        ]
-      },
-		  {
-        type: "stackedColumn100",
-        dataPoints: [
-        {  y: 40, label: "CP2"},
-        {  y: 10, label: "ITALTHAI" },
-        {  y: 72, label: "TRUE2" },
-        {  y: 30, label: "KKN" },
-        ]
-      }
-
-
-      ]
+                  ]
+                },
+          		  {
+                  type: "stackedColumn100",
+                  dataPoints: [
+                  {  y: 40, label: "CP2"},
+                  {  y: 10, label: "ITALTHAI" },
+                  {  y: 72, label: "TRUE2" },
+                  {  y: 30, label: "KKN" },
+                  ]
+                }
+          ]
     });
-
     chart.render();
   }

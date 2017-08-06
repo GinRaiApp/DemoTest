@@ -1,6 +1,6 @@
 <?php
   include 'connect.php';
-  $sql = "SELECT bu_name FROM seat";
+  $sql = "SELECT bu_name, count(*) as no FROM seat GROUP BY bu_name";
   $result = $conn->query($sql);
 
   $output="";
@@ -9,9 +9,10 @@
       // output data of each row
       while($row = $result->fetch_assoc()) {
           if($output != ""){ $output .= ","; }
-          $output .= ' { "bu_name": " '.$row["bu_name"].' "} ';
+          $output .= ' { "label": " '.$row["bu_name"].' ", ';
+          $output .= '  "y":  '.$row["no"].' } ';
       }
-      $output = '{"records":['.$output.']}';
+      $output = '['.$output.']';
       echo($output);
   } else {
       echo "0 results";
