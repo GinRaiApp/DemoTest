@@ -144,8 +144,10 @@
       <h1><b><i class="fa fa-building w3-xxlarge"></i> Overview Floor Plan</b></h1>
     </header>
 	
-	
-	
+	<form name="form1" method="post" action="PageUploadToMySQL2.php" enctype="multipart/form-data">
+	<input type="file" name="filUpload"><br><br>
+	<input name="btnSubmit" type="submit" value="Submit">
+	</form>
 		
 	
 	
