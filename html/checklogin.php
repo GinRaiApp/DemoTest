@@ -40,7 +40,7 @@
 	} else {
 		echo "<script> 
 		alert('Login Failed'); 
-		window.location.href='../html/first.php'; 
+		window.location.href='../html/v3.php'; 
 		</script>";
 	}
 
