@@ -130,7 +130,7 @@
 	  </li>
 	  
 	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
-	  <li><a href="../html/contact.php#">Contact Us</a></li>
+	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
 	</ul>
 	</nav>
 	
