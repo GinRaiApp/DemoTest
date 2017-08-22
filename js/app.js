@@ -2,7 +2,7 @@ var app = angular.module("myApp",[]);
 app.controller("myCtrl",function($scope,$http){
 
   $scope.displayData = function(){
-    $http.get("http://localhost:8888/demo/php/seatData.php").then(function(res){
+    $http.get("http://localhost/DemoTest/php/seatData.php").then(function(res){
       $scope.seat = res.data;
       console.log(JSON.stringify($scope.seat))
       BarChart($scope.seat);

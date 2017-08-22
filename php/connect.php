@@ -1,12 +1,12 @@
 <?php
-	$server = '127.0.0.1';
+	$server = 'localhost';
 	$username = 'root';
-	$password = 'root';
-	$db = 'demo';
-  $port = '8889';
+	$password = 'Password*1234';
+	$db = 'p_inventory';
+	//$port = '8889';
 
 	// Create connection
-	$conn = new mysqli($server, $username, $password, $db, $port);
+	$conn = new mysqli($server, $username, $password, $db);
 
 	// Check connection
 	if ($conn->connect_error) {
