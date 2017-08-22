@@ -109,10 +109,10 @@ chart.render();
             indexLabel: "{y}",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: 48},
-              {label: "TRUE2", y: 99},
-              {label: "ITALTHAI", y: 20 },
-              {label: "KKN", y: 99},
+              {label: "CP2", y: 690},
+              {label: "TRUE2", y: 1868},
+              {label: "ITALTHAI", y: 90 },
+              {label: "KKN", y: 1327},
             ]
           },
           {
@@ -121,10 +121,10 @@ chart.render();
             legendText: "Null",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: 0},
-              {label: "TRUE2", y: 0},
-              {label: "ITALTHAI", y: 0},
-              {label: "KKN", y: 0},
+              {label: "CP2", y: 100},
+              {label: "TRUE2", y: 250},
+              {label: "ITALTHAI", y: 50},
+              {label: "KKN", y: 180},
             ]
           }
         ],
@@ -191,10 +191,10 @@ function makeChart(){
             legendText: "Null",
             showInLegend: true,
             dataPoints:[
-              {label: "CP2", y: 0},
-              {label: "TRUE2", y: 0},
-              {label: "ITALTHAI", y: 0},
-              {label: "KKN", y: 0},
+              {label: "CP2", y: 100},
+              {label: "TRUE2", y: 250},
+              {label: "ITALTHAI", y: 50},
+              {label: "KKN", y: 180},
             ]
           }
         ],
