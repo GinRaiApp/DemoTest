@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
 	<style>
 	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 	body, html {
@@ -15,7 +16,7 @@
     color: #777;
     line-height: 1.8;
 	
-	input[type=text],input[type=email], input[type=date] {
+	input[type=text],input[type=email],input[type=date] {
 		width: 100%;
 		padding: 8px 18px;
 		margin: 5px 0;
@@ -64,10 +65,12 @@
 	</style>
 </head>
 <body style="background-color:linen!important;">
+
+
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/first.php">true inventory</a></li>
-	  <li><a href="http://localhost/DemoTest/html/leftmenu.php" style="border-radius: 4px;">report</a>
+	  <li><a href="http://localhost/DemoTest/html/leftmenu2.php" style="border-radius: 4px;">report</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
@@ -76,7 +79,7 @@
 		  
 		</ul>
 	  </li>
-	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
+	  <li><a href="http://localhost/DemoTest/html/floor.php">floor plan</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
@@ -89,12 +92,11 @@
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
-	  
+
 	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
 	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
 	</ul>
 	</nav>
-
 
 
 	<div class="contactus" style="width:100%; margin:10px auto; border-radius: 12px;">
@@ -114,7 +116,8 @@
 				<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
 			  </div>
 			  <p>Recommend Please.... <i class="fa fa-building"></i>:</p>
-			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target">
+			  
+			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target" id="frmAdd">
 			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
 				  <div style="padding:8px; display:block; border:none; width:100%;">
 					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">

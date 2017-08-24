@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
 <style>
 
 table, td, tr, th
@@ -125,12 +126,13 @@ table, td, tr, th
 	
 </head>
 
-<body>
+<body style="background-color:linen!important;">
+
 
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/first.php">true inventory</a></li>
-	  <li><a href="http://localhost/DemoTest/html/leftmenu.php" style="border-radius: 4px;">report</a>
+	  <li><a href="http://localhost/DemoTest/html/leftmenu2.php" style="border-radius: 4px;">report</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
@@ -139,7 +141,7 @@ table, td, tr, th
 		  
 		</ul>
 	  </li>
-	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
+	  <li><a href="http://localhost/DemoTest/html/floor.php">floor plan</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
@@ -152,7 +154,7 @@ table, td, tr, th
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
-	  
+
 	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
 	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
 	</ul>
