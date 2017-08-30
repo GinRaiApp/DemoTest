@@ -36,7 +36,7 @@ img {margin-bottom: -7px}
 <div class="w3-clear"></div>
 <header class="w3-center w3-margin-bottom">
   <h1><img src="http://localhost/DemoTest/photos/Logo-TRUE_svg.png" style="width:20%;" ></h1>
-  <p><b>True Information Technology.</b> [ Facility Management ]</p>
+  <p><b>Customer Service Support.</b> [ Facility Management ]</p>
   <p class="w3-padding-16"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Please Log in</button></p>
 </header>
   <div id="id01" class="w3-modal">

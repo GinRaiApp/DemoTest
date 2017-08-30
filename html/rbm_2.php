@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>contact us</title>
+	<title>Rental Building Master</title>
 	<link rel="stylesheet" type="text/css" href="/DemoTest/css/Leftmenu.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
 	<style>
 	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 	body, html {
@@ -102,41 +103,74 @@
 	<div class="contactus" style="width:100%; margin:10px auto; border-radius: 12px;">
 		<!-- Container (Contact Section) -->
 		<div class="w3-content w3-container w3-padding-64" id="contact">
-		  <h3 class="w3-center">CONTACT US</h3>
+		  <h3 class="w3-center">Rental Building Master</h3>
 
 		  <div class="w3-row w3-padding-32 w3-section">
 			<div class="w3-col m4 w3-container">
-			  <!-- Add Google Maps -->
-			  <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:500px;"></div>
-			</div>
-			<div class="w3-col m8 w3-panel">
-			  <div class="w3-large w3-margin-bottom">
-				<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> True Corporation Public Company Limited <br>
-				<i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-				<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-			  </div>
-			  <p>Recommend Please.... <i class="fa fa-building"></i>:</p>
-			  
+			 
 			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target" id="frmAdd">
 			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-				  <div style="padding:8px; display:block; border:none; width:100%;">
-					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">
-				  </div>
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="First Name" required name="fname" id="fname">
-				  </div>
+					<input class="w3-input w3-border" type="text" placeholder="building" required name="building" id="building">
+				  </div> 
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="Last Name" required name="lname" id="lname">
+					<input class="w3-input w3-border" type="text" placeholder="total_area(sq.m.)" required name="total_area" id="total_area">
 				  </div><br><br>
+				  
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="Email" required name="email" id="email">
+					<input class="w3-input w3-border" type="text" placeholder="seats" required name="seats" id="seats">
 				  </div>
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="Phone Number" required name="phone" id="phone">
+					<input class="w3-input w3-border" type="text" placeholder="space_rental(baht/sq.m)" required name="space_rental" id="space_rental">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="service_charge(baht/sq.m)" required name="service_charge" id="service_charge">
 				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="extra_charge" required name="extra_charge" id="extra_charge">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="furniture_rental" required name="furniture_rental" id="furniture_rental">
+				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="IP_service_charge(baht/sq.m)" required name="IP_service_charge" id="IP_service_charge">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="extra_fee(baht/sq.m)" required name="extra_fee" id="extra_fee">
+				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="Gen/UPS_rent" required name="Gen_UPS_rent" id="Gen_UPS_rent">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="electricity(baht/unit)" required name="electricity" id="electricity">
+				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="Air_OT(baht/hr.)" required name="OT" id="OT">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="water(baht/unit)" required name="water" id="water">
+				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="include_service_fee(baht/sq.m/month)" required name="include_service_fee" id="include_service_fee">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="AVG_rental_rates" required name="AVG_rental_rates" id="AVG_rental_rates">
+				  </div>
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="average_seat_per_sqm" required name="average_seat_per_sqm" id="average_seat_per_sqm">
+				  </div><br><br>
+				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="cost_per_seat" required name="cost_per_seat" id="cost_per_seat">
+				  </div><br><br>
 				</div>
-				<input class="w3-input w3-border" type="text" placeholder="Message" required name="comment" id="comment" 
-				style="padding:8px; display:block; border:none; width:100%; height:100px;">
+				
 				<button class="w3-button w3-black w3-right w3-section" type="submit">
 				  <i class="fa fa-paper-plane"></i> SEND MESSAGE
 				</button>
@@ -145,29 +179,7 @@
 		  </div>
 		</div>
 
-		 
-		<!-- Add Google Maps -->
-		<script>
-		function myMap()
-		{
-		  myCenter=new google.maps.LatLng(13.762541, 100.567932);
-		  var mapOptions= {
-			center:myCenter,
-			zoom:21, scrollwheel: false, draggable: false,
-			mapTypeId:google.maps.MapTypeId.ROADMAP
-		  };
-		  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-		  var marker = new google.maps.Marker({
-			position: myCenter,
-		  });
-		  marker.setMap(map);
-		}
-
-
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
+		
 	</div>
 	
 

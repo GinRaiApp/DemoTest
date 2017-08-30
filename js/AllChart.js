@@ -23,7 +23,7 @@ var chart = new CanvasJS.Chart("LineGraphContainer",
     data: [
     {
       type: "stackedArea",
-      name: "Awaya",
+      name: "Avaya",
       showInLegend: true,
       dataPoints: [
         { x: new Date(2013, 00, 1), y: 1100 },

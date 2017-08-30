@@ -13,50 +13,45 @@
     <script type="text/javascript" src="../js/AllChart.js"></script>
     <script type="text/javascript" src="../lib/angular.min.js"></script>
     <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
-	
-	
 
   </head>
 
-<body style="background-color:linen!important;">
+  <body>
+    <div class="container">
+      <nav id="primary_nav_wrap" >
+        	<ul>
+        	  <li class="current-menu-item "><a href="../index.php">true inventory</a></li>
+        	  <li><a href="http://localhost:8888/inventory_demo/page/leftmenu.php" style="border-radius: 4px;">report</a>
+        		<ul>
+        		  <li class="linkstyle1"><a href="#annualre"> Annual Report </a></li>
+        		  <li class="linkstyle2"><a href="#overview"> Overview </a></li>
+        		  <li class="linkstyle3"><a href="#seatre"> Seat Report </a></li>
+        		  <li class="linkstyle4"><a href="#devicesre"> Devices Report </a></li>
+        		</ul>
+        	  </li>
+        	  <li><a href="http://localhost:8888/inventory_demo/page/floor.php">floor plan</a>
+        		<ul>
+        		  <li class="linkstyle1"><a href="#">All Floor Plan</a></li>
+        		  <li class="linkstyle2"><a href="#">Add Floor Plan</a></li>
+        		</ul>
+        	  </li>
+        	  <li><a href="http://localhost:8888/inventory_demo/page/master.php">rb master</a>
+        		<ul>
+        		  <li class="linkstyle1"><a href="#">Sub Menu 1</a></li>
+        		  <li class="linkstyle2"><a href="#">Sub Menu 2</a></li>
+        		  <li class="linkstyle3"><a href="#">Sub Menu 3</a></li>
+        		</ul>
+        	  </li>
 
-
-	<nav id="primary_nav_wrap" >
-	<ul>
-	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
-	  <li><a href="http://localhost/DemoTest/html/leftmenu2.php" style="border-radius: 4px;">report</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
-		  
-		</ul>
-	  </li>
-	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
-		</ul>
-	  </li>
-	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">Sub Menu 1</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Sub Menu 2</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
-		</ul>
-	  </li>
-
-	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
-	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
-	</ul>
-	</nav>
+        	  <li><a href="http://localhost:8888/inventory_demo/index.php#" target="_blank">cm inventory</a></li>
+        	  <li><a href="../page/contact.php#">Contact Us</a></li>
+        	</ul>
+    	</nav>
 
       <!-- controller -->
       <div ng-app="myApp" ng-controller="myCtrl" ng-init="displayData(); fn1()" id="myData">
 
-        <div class="frist"  style="width:100%; padding-top:50px;text-decoration; margin:auto;" id="annualre">
+        <div class="frist"  style="width:100%;padding-top:50px;text-decoration; margin:auto;" id="annualre">
       	<!-- Header -->
           <header class="w3-container" >
             <h1><b><i class="fa fa-area-chart w3-xxlarge" ></i> Annual Report </b></h1>
