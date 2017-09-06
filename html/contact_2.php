@@ -153,7 +153,7 @@
 		  myCenter=new google.maps.LatLng(13.762541, 100.567932);
 		  var mapOptions= {
 			center:myCenter,
-			zoom:21, scrollwheel: false, draggable: false,
+			zoom:18, scrollwheel: false, draggable: true,
 			mapTypeId:google.maps.MapTypeId.ROADMAP
 		  };
 		  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
@@ -166,7 +166,7 @@
 
 
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwgkYMocsk07fN3pHhqMQIiZMJ9en_kH0&callback=myMap"></script>
 
 	</div>
 	

@@ -16,7 +16,7 @@
 
   </head>
 
-  <body>
+  <body style="background-color:linen!important;">
     <div class="container">
       <nav id="primary_nav_wrap" >
         	<ul>
