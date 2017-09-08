@@ -19,27 +19,30 @@ echo "Connected successfully";
 //select db
 $objDB = mysql_select_db("p_inventory");
 $strSQL = "SELECT * FROM rbm";
-$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+$objQuery = mysql_query("SELECT * FROM rbm WHERE `date`='2017-09-08'");
+//$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 
 ?>
-	<table width="600" border="1" cellpadding="1" cellspacing="1" align='center' width='500'>
+	<table border="1" cellpadding="1" cellspacing="1" align='center' >
 	<tr align='center' bgcolor='#CCCCCC'>
-		<th>อาคาร</th>
-		<th>พื้นที่รวม (ตร.ม.)</th>
-		<th>จำนวนที่นั่ง</th>
-		<th>ค่าเช่าพื้นที่ (บาท/ตร.ม.)</th>
-		<th>ค่าบริการ (บาท/ตร.ม.)</th>
-		<th>ค่าบริการส่วนเพิ่ม</th>
-		<th>ค่าเช่าเฟอร์นิเจอร์ (บาท/ตร.ม.)	</th>
-		<th>ค่าบริการIP (บาท/ตร.ม.)	</th>
-		<th>ค่าบริการพิเศษ (บาท/ตร.ม.)</th>
-		<th>ค่าเช่าGen/UPS(บาท/ตร.ม.)</th>
-		<th>ค่าไฟฟ้า (บาท/unit)</th>
-		<th>ค่าโอที (บาท/Hr)</th>
-		<th>ค่าน้ำ (บาท/unit)</th>
-		<th>รวมอัตราค่าเช่าบริการ (บาท/ตร.ม./เดือน)</th>
-		<th>AVG อัตราค่าเช่าบริการ	</th>
-		<th>Average seat per sqm</th>
+		<th>date</th>
+		<th>bu_name</th>
+		<th>floor_number</th>
+		<th>total_area</th>
+		<th>seats</th>
+		<th>space_rental</th>
+		<th>service_charge</th>
+		<th>extra_charge</th>
+		<th>furniture rental</th>
+		<th>IP service charge</th>
+		<th>extra_fee</th>
+		<th>Gen_UPS_rent</th>
+		<th>electricity</th>
+		<th>OT</th>
+		<th>water</th>
+		<th>include service fee	</th>
+		<th>AVG rental rates</th>
+		<th>average_seat per_sqm</th>
 		<th>Cost per Seat</th>
 	</tr>
 <?php
@@ -47,7 +50,9 @@ $objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 	{	
 ?>		
 	<tr>
-		<td><?php echo $objResult["building"];?></td>
+		<td><?php echo $objResult["date"];?></td>
+		<td><?php echo $objResult["bu_name"];?></td>
+		<td><?php echo $objResult["floor_number"];?></td>
 		<td><?php echo $objResult["total_area"];?></td>
 		<td><?php echo $objResult["seats"];?></td>
 		<td><?php echo $objResult["space_rental"];?></td>

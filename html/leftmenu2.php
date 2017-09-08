@@ -4,12 +4,11 @@
     <title>Left Menu</title>
 
     <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
+	
+	
     <script type="text/javascript" src="../js/AllChart.js"></script>
     <script type="text/javascript" src="../lib/angular.min.js"></script>
     <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
@@ -129,8 +128,8 @@
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">Sub Menu 1</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Sub Menu 2</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">dbtest</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>

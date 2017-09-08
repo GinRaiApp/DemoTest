@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+	
 	<style>
 	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 	body, html {
@@ -108,68 +108,76 @@
 		  <div class="w3-row w3-padding-32 w3-section">
 			<div class="w3-col m4 w3-container">
 			 
-			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target" id="frmAdd">
+			  <form action="saverbm.php" name="frmrAdd" method="post" target="iframe_target" id="frmrAdd">
 			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+				<!-- input date -->
+				  <div style="padding:8px; display:block; border:none; width:100%;">
+					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">
+				  </div>
+				<!--..............-->
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="building" required name="building" id="building">
 				  </div> 
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="total_area(sq.m.)" required name="total_area" id="total_area">
-				  </div><br><br>
+					<input class="w3-input w3-border" type="text" placeholder="bu_name" required name="bu_name" id="bu_name">
+				  </div> <br><br>
 				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="total_area(sq.m.)" required name="total_area" id="total_area">
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="seats" required name="seats" id="seats">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="space_rental(baht/sq.m)" required name="space_rental" id="space_rental">
-				  </div><br><br>
-				  
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="service_charge(baht/sq.m)" required name="service_charge" id="service_charge">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="extra_charge" required name="extra_charge" id="extra_charge">
-				  </div><br><br>
-				  
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="furniture_rental" required name="furniture_rental" id="furniture_rental">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="IP_service_charge(baht/sq.m)" required name="IP_service_charge" id="IP_service_charge">
-				  </div><br><br>
-				  
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="extra_fee(baht/sq.m)" required name="extra_fee" id="extra_fee">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="Gen/UPS_rent" required name="Gen_UPS_rent" id="Gen_UPS_rent">
-				  </div><br><br>
-				  
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="electricity(baht/unit)" required name="electricity" id="electricity">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="Air_OT(baht/hr.)" required name="OT" id="OT">
-				  </div><br><br>
-				  
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="water(baht/unit)" required name="water" id="water">
-				  </div>
+				  </div><br><br>
+				  
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="include_service_fee(baht/sq.m/month)" required name="include_service_fee" id="include_service_fee">
-				  </div><br><br>
-				  
-				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="AVG_rental_rates" required name="AVG_rental_rates" id="AVG_rental_rates">
 				  </div>
 				  <div class="w3-half">
-					<input class="w3-input w3-border" type="text" placeholder="average_seat_per_sqm" required name="average_seat_per_sqm" id="average_seat_per_sqm">
+					<input class="w3-input w3-border" type="text" placeholder="AVG_rental_rates" required name="AVG_rental_rates" id="AVG_rental_rates">
 				  </div><br><br>
 				  
+				  <div class="w3-half">
+					<input class="w3-input w3-border" type="text" placeholder="average_seat_per_sqm" required name="average_seat_per_sqm" id="average_seat_per_sqm">
+				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="cost_per_seat" required name="cost_per_seat" id="cost_per_seat">
 				  </div><br><br>
-				</div>
+				 </div>
 				
 				<button class="w3-button w3-black w3-right w3-section" type="submit">
 				  <i class="fa fa-paper-plane"></i> SEND MESSAGE
