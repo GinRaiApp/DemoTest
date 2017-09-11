@@ -2,8 +2,72 @@
 <head>
 	<title>DB test</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/DemoTest/css/Leftmenu.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
+
+	<style>
+		table {
+			border-collapse: collapse;
+			margin-top:20px;
+			
+		}
+
+		table, th, td {
+			border: 1px solid black;
+		}
+		
+		th, td{
+			font-size:12px;
+			padding:2px;
+			
+		}
+	</style>
+	
 </head>
-<body>
+<body style="background-color:linen!important;">
+
+
+	<nav id="primary_nav_wrap" >
+	<ul>
+	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
+	  <li><a href="http://localhost/DemoTest/html/leftmenu2.php" style="border-radius: 4px;">report</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
+		  
+		</ul>
+	  </li>
+	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
+		</ul>
+	  </li>
+	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
+		<ul>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
+		   <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">dbtest</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
+		</ul>
+	  </li>
+
+	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
+	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
+	</ul>
+	</nav>
+	
+<div class="w3-opacity">
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom"> 
+	<center><h1 style="margin-top:50px; border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>Show Information in DB</b></h1></center>  
+</header>	
+</div>
 <?php
 $objConnect = mysql_connect("localhost","root","Password*1234") or die("Error Connect to Database");
 
@@ -14,16 +78,16 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "Connected successfully";
+//echo "Connected successfully";
 
 //select db
 $objDB = mysql_select_db("p_inventory");
 $strSQL = "SELECT * FROM rbm";
-$objQuery = mysql_query("SELECT * FROM rbm WHERE `date`='2017-09-08'");
-//$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+//$objQuery = mysql_query("SELECT * FROM rbm WHERE `date`='2017-09-08'");
+$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 
 ?>
-	<table border="1" cellpadding="1" cellspacing="1" align='center' >
+	<table align='center'  >
 	<tr align='center' bgcolor='#CCCCCC'>
 		<th>date</th>
 		<th>bu_name</th>

@@ -122,8 +122,8 @@ select {
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
@@ -142,9 +142,13 @@ select {
 
 	<div class="contactus" style="width:100%; margin:10px auto; border-radius: 12px;">
 		<!-- Container (Contact Section) -->
-		<div class="w3-content w3-container w3-padding-64" id="contact">
-		  <h1 class="w3-center" style="color: maroon; text-align: center;    font-size: 36px; font-weight: bold;">Rental Building Master</h1>
-
+		
+	<div class="w3-content w3-container w3-padding-64" id="contact">
+	<div class="w3-opacity">
+	<header class="w3-center w3-margin-bottom"> 
+		<center><h1 style=" border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>Rental Building Master</b></h1></center>
+	</header>
+	</div>
 		  <div class="w3-row w3-padding-32 w3-section">
 			<div class="">
 			 

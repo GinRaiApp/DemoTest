@@ -34,8 +34,8 @@
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
@@ -58,9 +58,10 @@
 <div class="w3-opacity">
 
 <div class="w3-clear"></div>
-<header class="w3-center w3-margin-bottom">
-  <h1 style="margin-top:50px;"><b>Floor Plan</b></h1>
-  <p>Choose File Pleas...<button class="an" onclick="myFunction()">ADD NEW</button></p>
+<header class="w3-center w3-margin-bottom"> 
+	<center><h1 style="margin-top:60px; border-bottom: 3px solid lightgray; width:50%;"><b>Floor Plan</b></h1></center>
+  
+	
   
 </header>
 </div>
@@ -127,20 +128,7 @@
     <!-- End Grid/Pricing tables -->
     </div>
 
-</div>
-<!-- End Page Content -->
-</div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
  
 <script>
 // Toggle grid padding

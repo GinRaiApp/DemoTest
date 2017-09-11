@@ -81,8 +81,8 @@
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
+		 <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
@@ -102,12 +102,17 @@
 	<div class="contactus" style="width:100%; margin:10px auto; border-radius: 12px;">
 		<!-- Container (Contact Section) -->
 		<div class="w3-content w3-container w3-padding-64" id="contact">
-		  <h3 class="w3-center">CONTACT US</h3>
+		<div class="w3-opacity">
+		<div class="w3-clear"></div>
+		<header class="w3-center w3-margin-bottom"> 
+			<center><h1 style=" border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>CONTACT US</b></h1></center>  
+		</header>
+		
 
 		  <div class="w3-row w3-padding-32 w3-section">
 			<div class="w3-col m4 w3-container">
 			  <!-- Add Google Maps -->
-			  <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:500px;"></div>
+			  <div id="map" class="w3-round-large w3-greyscale" style="width:100%;height:500px;"></div>
 			</div>
 			<div class="w3-col m8 w3-panel">
 			  <div class="w3-large w3-margin-bottom">
@@ -119,8 +124,8 @@
 			  
 			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target" id="frmAdd">
 			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-				  <div style="padding:8px; display:block; border:none; width:100%;">
-					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">
+				  <div style="padding:8px; display:block; border:none; width:100%; ">
+					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date" style="color: #777;">
 				  </div>
 				  <div class="w3-half">
 					<input class="w3-input w3-border" type="text" placeholder="First Name" required name="fname" id="fname">
@@ -148,25 +153,23 @@
 		 
 		<!-- Add Google Maps -->
 		<script>
-		function myMap()
-		{
-		  myCenter=new google.maps.LatLng(13.762541, 100.567932);
-		  var mapOptions= {
-			center:myCenter,
-			zoom:18, scrollwheel: false, draggable: true,
-			mapTypeId:google.maps.MapTypeId.ROADMAP
-		  };
-		  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-		  var marker = new google.maps.Marker({
-			position: myCenter,
-		  });
-		  marker.setMap(map);
-		}
+		function initMap() {
+			var uluru = {lat:13.762412, lng: 100.568128};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 16,
+			  center: uluru
+			});
+			var marker = new google.maps.Marker({
+			  position: uluru,
+			  map: map
+			});
+		  }
 
 
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwgkYMocsk07fN3pHhqMQIiZMJ9en_kH0&callback=myMap"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsFQM_EoXyfBCkopHFU-GadWnS47Mh1kQ&callback=initMap">
+		</script>
 
 	</div>
 	

@@ -143,8 +143,8 @@ table, td, tr, th
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
@@ -162,31 +162,34 @@ table, td, tr, th
 	
 	
 	
-	<div class="frist"  style="padding-top:50px;text-decoration;">
+	<div class="frist"  style="padding-top:20px;text-decoration;">
 	<!-- Header -->
-    <header class="w3-container">
-      <h1><b><i class="fa fa-file w3-xxlarge"></i> Create Rental Building Master</b></h1>
-    </header>
-	
+	<div class="w3-opacity">
+	<header class="w3-center w3-margin-bottom"> 
+		<center><h1 style="margin-top:50px; border-bottom: 3px solid lightgray; width:50%;"><b>Create Rental Building Master</b></h1></center>
+	</header>
+	</div>
+
 	<form class="master">
-		<h2>อัตราค่าบริการ : </h2>
+		<h2>Service Rate: </h2>
 			<table style="width: 100%;">
 			  <tr style="background-color:gray; color:#ffffff;">
-				<th> อาคาร </th>
-				<th> พื้นที่รวม (ตร.ม.) </th>
-				<th> จำนวนที่นั่ง </th>
-				<th> ค่าเช่าพื้นที่ (บาท/ตร.ม.) </th>
-				<th> ค่าบริการ (บาท/ตร.ม.) </th>
-				<th> ค่าบริการส่วนเพิ่ม </th>
-				<th> ค่าเช่าเฟอร์นิเจอร์ (บาท/ตร.ม.) </th>
-				<th> ค่าบริการIP (บาท/ตร.ม.) </th>
-				<th> ค่าบริการพิเศษ (บาท/ตร.ม.) </th>
-				<th> ค่าเช่าGen/UPS(บาท/ตร.ม.) </th>
-				<th> ค่าไฟฟ้า (บาท/unit) </th>
-				<th> ค่าโอที (บาท/Hr) </th>
-				<th> ค่าน้ำ (บาท/unit) </th>
-				<th> รวมอัตราค่าเช่าบริการ (บาท/ตร.ม./เดือน) </th>
-				<th> AVG อัตราค่าเช่าบริการ </th>
+				
+				<th> building name </th>
+				<th> floor number (Sq.m.) </th>
+				<th> total area </th>
+				<th> seats (Baht / sq.m.) </th>
+				<th> space rental (Baht / sq.m.)) </th>
+				<th> service charge </th>
+				<th> furniture rental (Baht / sq.m.)</th>
+				<th> IP service charge (Baht / sq.m.) </th>
+				<th> extra fee (Baht / sq.m.) </th>
+				<th> Gen/UPS rent(Baht / sq.m.) </th>
+				<th> electricity (Baht / unit)</th>
+				<th> OT (Bath / Hr) </th>
+				<th> water (Bath / unit) </th>
+				<th> include service fee (Baht / sq.m. / month) </th>
+				<th> AVG rental rates </th>
 				<th> Average seat per sqm </th>
 				<th> Cost per Seat </th>
 			  </tr>
@@ -712,8 +715,8 @@ table, td, tr, th
 			 
 			  <tr style="background-color:gray;">
 				<td style="text-align:center;">Grand Total</td>
-				<td>17,282.14</td>
-				<td>4,142.00</td>
+				<td><input type="number" name="quantity" min="0" style="width:100%; background-color:gray; border:none;"></td>
+				<td><input type="number" name="quantity" min="0" style="width:100%; background-color:gray; border:none;"></td>
 				<th colspan="14" ></th>
 			  </tr>
 			 			  
