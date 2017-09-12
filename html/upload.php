@@ -1,5 +1,16 @@
 <?php
 
+	$ext = pathinfo(basename($_FILES['upload']['name']),PATHINFO_EXTENSION);
+	$new_image_name = 'fp_'.time()."_".rand(1,9999).".".$ext;
+	$image_path = "../photos/FloorPlan/";
+	$upload_path = $image_path.$new_image_name;
+	
+	
+	$success = move_uploaded_file($_FILES['upload']['tmp_name'],$upload_path);
+	$upload = $new_image_name;
+	
+	
+
 	$objConnect = mysql_connect("localhost","root","Password*1234") or die("Error Connect to Database");
 	$objDB = mysql_select_db("p_inventory");
 	$strSQL = "INSERT INTO floorp ";
@@ -7,7 +18,7 @@
 	$strSQL .="VALUES ";
 	$strSQL .="('".$_POST["date"]."'";
 	$strSQL .=",'".$_POST["floor_id"]."','".$_POST["floor_number"]."','".$_POST["floor_area"]."' ";
-	$strSQL .=",'".$_POST["$upload"]."') ";
+	$strSQL .=",'$upload') ";
 	$objQuery = mysql_query($strSQL);
 	if($objQuery)
 	{
@@ -31,19 +42,14 @@ if ($_POST['submit']){
 	$type = $_FILES['upload']['type'];
 	$size = ($_FILES['upload']['size']/1024);
 	
-	echo "Name: $name<br>
+	echo "***File Detail*** <br><br>
+		  Name: $name<br>
+		  File name : $new_image_name<br>
 		  Stored in: $temp<br>
 		  Type: $type<br>
 		  Size: $size kb.<br><br> ";
 		  
-	$ext = pathinfo(basename($_FILES['upload']['name']),PATHINFO_EXTENSION);
-	$new_image_name = 'fp_'.time()."_".rand(1,9999).".".$ext;
-	$image_path = "../photos/FloorPlan/";
-	$upload_path = $image_path.$new_image_name;
-	
-	
-	$success = move_uploaded_file($_FILES['upload']['tmp_name'],$upload_path);
-	$upload = $new_image_name;
+
 	
 	
 	

@@ -6,11 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/p_inventory/css/p_style.css">
 	<link rel="stylesheet" type="text/css" href="/p_inventory/css/w3.css">
-	<script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
-	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/Leftmenu.css">
+	
+	<script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
+	<script type="text/javascript" src="../canvasjs/jquery.canvasjs.min.js"></script>
 <style>
 
 table, td, tr, th
@@ -150,7 +151,7 @@ table, td, tr, th
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		   <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">dbtest</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
@@ -166,12 +167,12 @@ table, td, tr, th
 	<!-- Header -->
 	<div class="w3-opacity">
 	<header class="w3-center w3-margin-bottom"> 
-		<center><h1 style="margin-top:50px; border-bottom: 3px solid lightgray; width:50%;"><b>Create Rental Building Master</b></h1></center>
+		<center><h1 style="margin-top:50px; border-bottom: 3px solid lightgray; width:50%;  text-transform: uppercase;" ><b>Create Rental Building Master</b></h1></center>
 	</header>
 	</div>
 
 	<form class="master">
-		<h2>Service Rate: </h2>
+		<h2 style="color:gray;">Service Rate: </h2>
 			<table style="width: 100%;">
 			  <tr style="background-color:gray; color:#ffffff;">
 				

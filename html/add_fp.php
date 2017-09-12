@@ -41,7 +41,7 @@
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		   <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">dbtest</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
@@ -55,31 +55,33 @@
 
 
 <!-- Header -->
-<div class="w3-opacity">
 
-<div class="w3-clear"></div>
-<header class="w3-center w3-margin-bottom"> 
-	<center><h1 style="margin-top:50px;"><b>Floor Plan</b></h1></center>
-</header>
+	<div class="w3-content w3-container w3-padding-64" id="contact">
+	<div class="w3-opacity">
+	<header class="w3-center w3-margin-bottom"> 
+		<center><h1 style=" border-bottom: 3px solid lightgray; width:80%; color: maroon; font-weight: bold;"><b>ADD FLOOR PLAN</b></h1></center>
+	</header>
   
 	<form action="upload.php" method="POST" enctype="multipart/form-data" style="width:50%; margin:0 auto;" name="frmAdd" target="iframe_target" id="frmAdd">
-		<div style="padding:8px; display:block; border:none; width:100%;">
+		<div style="display:block; border:none; width:100%;">
 			<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">
-		</div>
+		</div><br/>
+		
+		Input Detail Please...
 		<div class="">
 			<input class="w3-input w3-border" type="text" placeholder="floor_id" required name="floor_id" id="floor_id">
 		</div> 	
 		<div class="">
 			<input class="w3-input w3-border" type="text" placeholder="floor_number" required name="floor_number" id="floor_number">
 		</div> 	
-		<div class="">
+		<div >
 			<input class="w3-input w3-border" type="text" placeholder="floor_area" required name="floor_area" id="floor_area">
-		</div> 	
-		<div>
-			<label for="file">Choose File Pleas... </label>
-			<input type="file" name="upload"/>
+		</div> 	<br/>
+		<div >
+			<label for="file">Choose File Please... 
+			<input type="file" name="upload" class="w3-border" style="background-color:#ffffff; padding:5px; border-radius:5px; width:100%;" /></label>
 		</div>
-		
+
 		<input type="submit" name="submit" value="Upload !"/>
 	</form>
   

@@ -41,7 +41,7 @@
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		   <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">dbtest</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
@@ -51,21 +51,17 @@
 	</ul>
 	</nav>
 
-
-
-
+<!--body-->
 <!-- Header -->
-<div class="w3-opacity">
 
-<div class="w3-clear"></div>
-<header class="w3-center w3-margin-bottom"> 
-	<center><h1 style="margin-top:60px; border-bottom: 3px solid lightgray; width:50%;"><b>Floor Plan</b></h1></center>
-  
-	
-  
-</header>
-</div>
- <!-- Grid for pricing tables -->
+	<div class="w3-content w3-container" style="padding-top:50px;">
+		<div class="w3-opacity">
+			<header class="w3-center"> 
+				<center><h1 style=" border-bottom: 3px solid lightgray; width:80%; color: maroon; font-weight: bold;"><b>FLOOR PLAN</b></h1></center>
+			</header>
+		</div>
+	</div>
+<!-- Grid for pricing tables -->
     
     <div class="w3-row-padding" style="margin:5px auto; width:95%;">
       <div class="w3-half w3-margin-bottom" style="width:25%;">
@@ -128,8 +124,6 @@
     <!-- End Grid/Pricing tables -->
     </div>
 
-
- 
 <script>
 // Toggle grid padding
 function myFunction() {
@@ -151,6 +145,11 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
 </script>
+
+
+
+ 
+
 
 </body>
 </html>
