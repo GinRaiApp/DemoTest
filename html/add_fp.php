@@ -64,10 +64,17 @@
   
 	<form action="upload.php" method="POST" enctype="multipart/form-data" style="width:50%; margin:0 auto;" name="frmAdd" target="iframe_target" id="frmAdd">
 		<div style="display:block; border:none; width:100%;">
-			<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date">
+			<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date" style="border-radius:4px; color:#a2a2a2;">
 		</div><br/>
 		
 		Input Detail Please...
+		<select class="w3-input w3-border" type="text" placeholder="building" required name="building" id="building" style="margin-bottom:5px; color:#a2a2a2;">
+			<option value="">Select building name</option>
+			<option value="CP2">CP2</option>
+			<option value="KKN">KKN</option>
+			<option value="ITALTHAI">ITALTHAI</option>
+			<option value="TRUE">TRUE</option>
+		</select>
 		<div class="">
 			<input class="w3-input w3-border" type="text" placeholder="floor_id" required name="floor_id" id="floor_id">
 		</div> 	
@@ -79,10 +86,10 @@
 		</div> 	<br/>
 		<div >
 			<label for="file">Choose File Please... 
-			<input type="file" name="upload" class="w3-border" style="background-color:#ffffff; padding:5px; border-radius:5px; width:100%;" /></label>
+			<input type="file" name="upload" class="w3-border" style="background-color:#ffffff; padding:5px; border-radius:4px; width:100%; color:#a2a2a2;" /></label>
 		</div>
 
-		<input type="submit" name="submit" value="Upload !"/>
+		<input type="submit" name="submit" value="Upload !" />
 	</form>
   
   

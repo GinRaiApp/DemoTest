@@ -1,7 +1,7 @@
 <?php
 
 	$ext = pathinfo(basename($_FILES['upload']['name']),PATHINFO_EXTENSION);
-	$new_image_name = 'fp_'.time()."_".rand(1,9999).".".$ext;
+	$new_image_name = 'fp_'.rand(1,9999).".".$ext;
 	$image_path = "../photos/FloorPlan/";
 	$upload_path = $image_path.$new_image_name;
 	
@@ -14,11 +14,11 @@
 	$objConnect = mysql_connect("localhost","root","Password*1234") or die("Error Connect to Database");
 	$objDB = mysql_select_db("p_inventory");
 	$strSQL = "INSERT INTO floorp ";
-	$strSQL .="(date,floor_id,floor_number,floor_area,fp) ";
+	$strSQL .="(date,floor_id,floor_number,floor_area,fp,building) ";
 	$strSQL .="VALUES ";
 	$strSQL .="('".$_POST["date"]."'";
 	$strSQL .=",'".$_POST["floor_id"]."','".$_POST["floor_number"]."','".$_POST["floor_area"]."' ";
-	$strSQL .=",'$upload') ";
+	$strSQL .=",'$upload','".$_POST["building"]."') ";
 	$objQuery = mysql_query($strSQL);
 	if($objQuery)
 	{

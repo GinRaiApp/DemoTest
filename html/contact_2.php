@@ -131,8 +131,8 @@
 			  <p>Recommend Please.... :</p>
 			  
 			  <form action="savecontact.php" name="frmAdd" method="post" target="iframe_target" id="frmAdd">
-			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-				  <div style="padding:8px; display:block; border:none; width:100%; ">
+			  <div class="w3-row-padding" style="margin:0 -16px 8px -16px;">
+				  <div style="padding:8px; display:block; border:none; width:100%;">
 					<input class="w3-input w3-border" type="date" placeholder="date" required name="date" id="date" style="color: #777;">
 				  </div>
 				  <div class="w3-half">
