@@ -20,22 +20,21 @@ img {margin-bottom: -7px}
     <i class="fa fa-remove"></i>
   </a>
   <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
-    <a href="../html/contact.php#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+	<img src="../photos/ag#" style="width:10%;" ><br><br>
+	<a href="http://www3.truecorp.co.th/new/about_true?ln=en" class="w3-bar-item w3-button w3-text-grey w3-hover-black"  target="_blank">About Company</a>
+    <a href="../html/contact_2.php#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact Us</a>
   </div>
 </nav>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+<div class="w3-content" style="max-width:100%;">
 
 <!-- Header -->
 <div class="">
 <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
 <div class="w3-clear"></div>
 <header class="w3-center w3-margin-bottom">
-  <h1><img src="http://localhost/DemoTest/photos/Logo-TRUE_svg.png" style="width:20%;" ></h1>
+  <h1><img src="../photos/Logo-TRUE_svg.png" style="width:20%;" ></h1>
   <p><b>Customer Service Support.</b> [ Facility Management ]</p>
   <p class="w3-padding-16"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Please Log in</button></p>
 </header>
@@ -44,7 +43,7 @@ img {margin-bottom: -7px}
   
       <div class="w3-center"><br>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-        <img src="http://localhost/DemoTest/photos/loginlogo3.png" alt="LOGIN" style="width:20%" class="w3-margin-top">
+        <img src="../photos/loginlogo3.png" alt="LOGIN" style="width:20%" class="w3-margin-top">
       </div>
 
       
@@ -73,7 +72,7 @@ img {margin-bottom: -7px}
 
 <!-- Photo Grid -->
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <img src="http://localhost/DemoTest/photos/cityy.jpg" style="width:100%">
+    <img src="../photos/cityy.jpg" style="width:100%">
 </div>
 
 <!-- End Page Content -->

@@ -24,13 +24,152 @@
 			font-size:12px;
 			padding:2px;
 			
+			
 		}
+		
+		td{background-color:#ffffff;}
+
+		#savebutton {
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 8px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			text-align:center;
+			font-size:23px;
+		}
+
+		#primary_nav_wrap
+		{
+			margin:15px 15px 15px 15px;
+			
+		}
+
+		#primary_nav_wrap ul
+		{
+			list-style:none;
+			position:relative;
+			float:left;
+			margin:0;
+			padding:0;
+			background-color:#990000;
+			width:100%;  
+			position: fixed; 
+			top: 0;	
+			left: 0;
+			border-style: none none solid none; 
+			border-width: 5px; 
+			border-color: #4CAF50;
+			
+		}
+
+		#primary_nav_wrap ul a
+		{
+			display:block;
+			color:#333;
+			text-decoration:none;
+			font-weight:700;
+			font-size:12px;
+			line-height:32px;
+			padding:0 15px;
+			font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+			text-transform: uppercase;
+			color:#ffffff;
+			font-size: 100%;
+		}
+
+		#primary_nav_wrap ul li
+		{
+			position:relative;
+			float:left;
+			margin:0;
+			padding:0
+		}
+
+
+
+		#primary_nav_wrap ul li:hover
+		{
+			background:#f6f6f6
+		}
+
+		#primary_nav_wrap ul ul
+		{
+			display:none;
+			position:absolute;
+			top:100%;
+			left:0;
+			background:#fff;
+			padding:0
+		}
+
+		#primary_nav_wrap ul ul li
+		{
+			float:none;
+			width:200px
+		}
+
+		#primary_nav_wrap ul ul a
+		{
+			line-height:120%;
+			padding:10px 15px
+		}
+
+		#primary_nav_wrap ul ul ul
+		{
+			top:0;
+			left:100%
+		}
+
+		#primary_nav_wrap ul li:hover > ul
+		{
+			display:block
+		}
+
+
+		
 	</style>
 	
 </head>
 <body style="background-color:linen!important;">
 
+	<?
+	$objConnect = mysql_connect("localhost","root","Password*1234") or die("Error Connect to Database");
+	$objDB = mysql_select_db("p_inventory");
+	$strSQL = "INSERT INTO rbm ";
+	$strSQL .="(date,building,bu_name,floor_number,total_area,seats,space_rental,service_charge,extra_charge,
+				furniture_rental,IP_service_charge,extra_fee,Gen_UPS_rent,electricity,OT,water,
+				include_service_fee,AVG_rental_rates,average_seat_per_sqm,cost_per_seat) ";
+	$strSQL .="VALUES ";
+	$strSQL .="('".$_POST["date"]."'";
+	$strSQL .=",'".$_POST["building"]."','".$_POST["bu_name"]."','".$_POST["floor_number"]."' ";
+	$strSQL .=",'".$_POST["total_area"]."','".$_POST["seats"]."','".$_POST["space_rental"]."' ";
+	$strSQL .=",'".$_POST["service_charge"]."','".$_POST["extra_charge"]."' ";
+	$strSQL .=",'".$_POST["furniture_rental"]."','".$_POST["IP_service_charge"]."','".$_POST["extra_fee"]."' ";
+	$strSQL .=",'".$_POST["Gen_UPS_rent"]."','".$_POST["electricity"]."','".$_POST["OT"]."' ";
+	$strSQL .=",'".$_POST["water"]."','".$_POST["include_service_fee"]."','".$_POST["AVG_rental_rates"]."' ";
+	$strSQL .=",'".$_POST["average_seat_per_sqm"]."','".$_POST["cost_per_seat"]."') ";
 
+	$objQuery = mysql_query($strSQL);
+	if($objQuery)
+	{
+		echo "<script language=\"JavaScript\">";
+		echo "alert('Save Done.');";
+		echo "</script>";
+	}
+	else
+	{
+		echo "<script language=\"JavaScript\">";
+		echo "alert('Save Error.');";
+		echo "</script>";
+	}
+	mysql_close($objConnect);
+	?>
+
+	<!--header-->
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
@@ -142,6 +281,22 @@ $objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 <?php
 mysql_close($objConnect);
 ?>
-</body>
 
+		<div id="savebutton" onclick="myFunction()"  >
+				<a href="#"  style=" background-color: #4CAF50;  color: white; border-radius: 4px;">
+					  <span class="glyphicon glyphicon-save-file" ></span> Save File / Print
+				</a>
+				
+		</div>
+
+			
+
+	
+	
+</body>
+<script>
+		function myFunction() {
+			window.print();
+		}
+	</script>
 </html>

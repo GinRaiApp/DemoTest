@@ -99,28 +99,15 @@
 	}
 	</script>
 	<style>
-		table {
-			border-collapse: collapse;
-			margin:80px;
-		   
-		}
-
-		table, td, th {
-			border: 1px solid black;
-			padding:8px;
-			
-
-		}
-
-		th{
-			color:pink;
+		.floating-box {
+			width: 100%;
+			height: 100px;
+			border:none;
+			margin:10px auto;
 			background-color:gray;
 		}
 
-		input[type=number] {
-			 border-style:none;
-			 background-color:linen;
-		}
+</style>
 	</style>
 	</head>
 	
@@ -128,7 +115,7 @@
    <!--style="background-color:linen!important;"-->
   <body style="background-color:linen!important;">
 
-
+	<!--header-->
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
@@ -144,13 +131,12 @@
 	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">Show</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
@@ -160,96 +146,56 @@
 	</ul>
 	</nav>
 	
-		
-      <!-- controller -->
-      <div ng-app="myApp" ng-controller="myCtrl" ng-init="displayData(); fn1()" id="myData">
+	<!--body-->
+	<div style="border:none; width:100%; height:50px; " class="floating-box"> </div>
 
-        <div class="frist"  style="width:100%;text-decoration; margin:auto;" >
-      	<!-- Header -->
-		<div id="annualre" style="padding-top:5px; height:700px;">
-		
-
-		<table id="inyear">
-			<tr>
-				<th><i>Name/Year</i></th>
-				<th>Y1</th>
-				<th>Y2</th>
-				<th>Y3</th>
-				<th>Y4</th>
-				<th>Y5</th>
-				<th>Y6</th>
-				<th>Y7</th>
-				<th>Y8</th>
-				<th>Y9</th>
-				<th>Y10</th>
+	<table bgcolor="#bcbcbc" border="1"  cellpadding="0" cellspacing="0" style="border-color:gray;" class="floating-box">
+		<tbody>
+			<tr bgcolor="#ffffff">
+				<td bgcolor="#cccccc" width="30" align="center">
+					<p style="margin:10px"><strong>ปี</strong></p>
+				</td>
+				<td width="60"><div align="center"><a href="/th/market/securities_company_statistics60.html">ปี 2560</a></div></td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics59.html">ปี 2559</a></div>
+				</td>
+				<td width="60"><div align="center"><a href="/th/market/securities_company_statistics58.html">ปี 2558</a></div></td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics57.html">ปี 2557</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics56.html">ปี 2556</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics55.html" target="_blank">ปี 2555</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics54.html" target="_blank">ปี 2554</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics53.html" target="_blank">ปี 2553</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics52.html" target="_blank">ปี 2552</a></div>
+				</td>
+				<td width="60">
+					<div align="center"><a href="/th/market/securities_company_statistics51.html" target="_blank">ปี 2551</a></div>
+				</td>
 			</tr>
-			<tr>
-				<th>Computer</th>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>	
-			</tr>
-            <tr>
-				<th>Amplifire</th>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>	
-			</tr>
-            <tr>
-				<th>Headset</th>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-			</tr>
-            <tr>
-				<th>Telephone</th>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-				<td><input type="number" name="fname" value="0" id="ipn1" style="width:100%;"></td>
-			</tr>
-		</table>
-		</div>
-		</div>
-		
-		
-		
-		
-        
-
-	  </div>
-	 
+		</tbody>		
+	</table>
+	
      
    
-  </body>
-    <script type="text/javascript" src="../js/app.js"></script>
+ 
+   
+	<div style="border:none; width:100%; height:50px; " class="floating-box">1</div>
+	<div style="border:none; width:100%; height:50px; " class="floating-box">2</div>
+	<div style="border:none; width:100%; height:50px; " class="floating-box">3</div>
+	<div style="border:none; width:100%; height:50px; " class="floating-box">4</div>
+	
+ </body>
+	<script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../lib/canvasjs.min.js"></script>
     <script type="text/javascript" src="../lib/jquery.canvasjs.min.js"></script>
 </html>
