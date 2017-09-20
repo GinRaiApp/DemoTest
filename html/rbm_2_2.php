@@ -117,19 +117,19 @@ select {
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Report Detail </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
-		  
+
 		</ul>
 	  </li>
 	  <li><a href="../html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/add_fp.php">Add Floor Plan</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
 	  <li><a href="../html/master.php">rb master</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/rbm_2_2.php">Add New</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="../html/dbtest.php">DB test</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>
@@ -153,7 +153,7 @@ select {
 		  <div class="w3-row w3-padding-32 w3-section">
 			<div class="">
 			 
-			<form action="dbtest.php" name="frmrAdd" method="post" target="iframe_target" id="frmrAdd">
+			<form action="saverbm.php" name="frmrAdd" method="post" target="iframe_target" id="frmrAdd">
 			<div class="row">
 			  <div class="column" style="background-color:#aaa;">
 				<div class="w3-row-padding" style="margin:0 -16px 8px -16px">
@@ -164,6 +164,24 @@ select {
 							  
 							<!-- input abount building -->
 							<div style="padding:8px ; display:block; border:none; width:100%;"> 
+							  <!--div class="w3-half">
+							  <form class="w3-input" type="text" placeholder="building" required name="building" id="building">
+								  <input type="radio" name="building" value="bu_01" checked> bu_01<br>
+								  <input type="radio" name="building" value="bu_02"> bu_02<br>
+								  <input type="radio" name="building" value="bu_03"> bu_03 <br> 
+								  <input type="radio" name="building" value="bu_04"> bu_04 
+						      </form> 
+							  </div>
+					
+							  <div class="w3-half">
+							  <form class="w3-input " type="text" placeholder="building" required name="bu_name" id="building">
+								  <input type="radio" name="bu_name" value="CP2" checked> CP2<br>
+								  <input type="radio" name="bu_name" value="KKN"> KKN<br>
+								  <input type="radio" name="bu_name" value="ITALTHAI"> ITALTHAI <br> 
+								  <input type="radio" name="bu_name" value="TRUE2"> TRUE2 <br>
+						      </form> 
+							  </div-->
+							  
 							  <select class="w3-input w3-border" type="text" placeholder="building" required name="building" id="building">
 								  <option value="">Select building id</option>
 								  <option value="bu_01">bu_01</option>
@@ -177,9 +195,9 @@ select {
 								  <option value="KKN">KKN</option>
 								  <option value="ITALTHAI">ITALTHAI</option>
 								  <option value="TRUE">TRUE</option>
-							  </select>			  
+							  </select>							  
 							  <div class="">
-								<input class="w3-input w3-border" type="text" placeholder="floor_number" required name="floor_number" id="floor_number">
+								<input class="w3-input " type="text" placeholder="floor_number" required name="floor_number" id="floor_number">
 							  </div> 
 							</div>
 						</div>

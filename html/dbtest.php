@@ -136,62 +136,30 @@
 </head>
 <body style="background-color:linen!important;">
 
-	<?
-	$objConnect = mysql_connect("localhost","root","Password*1234") or die("Error Connect to Database");
-	$objDB = mysql_select_db("p_inventory");
-	$strSQL = "INSERT INTO rbm ";
-	$strSQL .="(date,building,bu_name,floor_number,total_area,seats,space_rental,service_charge,extra_charge,
-				furniture_rental,IP_service_charge,extra_fee,Gen_UPS_rent,electricity,OT,water,
-				include_service_fee,AVG_rental_rates,average_seat_per_sqm,cost_per_seat) ";
-	$strSQL .="VALUES ";
-	$strSQL .="('".$_POST["date"]."'";
-	$strSQL .=",'".$_POST["building"]."','".$_POST["bu_name"]."','".$_POST["floor_number"]."' ";
-	$strSQL .=",'".$_POST["total_area"]."','".$_POST["seats"]."','".$_POST["space_rental"]."' ";
-	$strSQL .=",'".$_POST["service_charge"]."','".$_POST["extra_charge"]."' ";
-	$strSQL .=",'".$_POST["furniture_rental"]."','".$_POST["IP_service_charge"]."','".$_POST["extra_fee"]."' ";
-	$strSQL .=",'".$_POST["Gen_UPS_rent"]."','".$_POST["electricity"]."','".$_POST["OT"]."' ";
-	$strSQL .=",'".$_POST["water"]."','".$_POST["include_service_fee"]."','".$_POST["AVG_rental_rates"]."' ";
-	$strSQL .=",'".$_POST["average_seat_per_sqm"]."','".$_POST["cost_per_seat"]."') ";
-
-	$objQuery = mysql_query($strSQL);
-	if($objQuery)
-	{
-		echo "<script language=\"JavaScript\">";
-		echo "alert('Save Done.');";
-		echo "</script>";
-	}
-	else
-	{
-		echo "<script language=\"JavaScript\">";
-		echo "alert('Save Error.');";
-		echo "</script>";
-	}
-	mysql_close($objConnect);
-	?>
 
 	<!--header-->
 	<nav id="primary_nav_wrap" >
 	<ul>
 	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
-	  <li><a href="http://localhost/DemoTest/html/leftmenu2.php" style="border-radius: 4px;">report</a>
+	  <li><a href="../html/Report.#" style="border-radius: 4px;">report</a>
 		<ul>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Report Detail </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
-		  
+
 		</ul>
 	  </li>
-	  <li><a href="http://localhost/DemoTest/html/floor_2.php">floor plan</a>
+	  <li><a href="../html/floor_2.php">floor plan</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/add_fp.php">Add Floor Plan</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/add_fp.php">Add Floor Plan</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
 		</ul>
 	  </li>
-	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
+	  <li><a href="../html/master.php">rb master</a>
 		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="http://localhost/DemoTest/html/rbm_2_2.php">Add New</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="http://localhost/DemoTest/html/dbtest.php">DB test</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/rbm_2_2.php">Add New</a></li>
+		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="../html/dbtest.php">DB test</a></li>
 		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
 		</ul>
 	  </li>

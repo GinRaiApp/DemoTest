@@ -27,7 +27,7 @@
 	if($objQuery)
 	{
 		echo "<script language=\"JavaScript\">";
-		echo "alert('Save Done.');";
+		echo "alert('Save Done.'); window.location.href='../html/dbtest#'";
 		echo "</script>";
 	}
 	else
