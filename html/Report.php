@@ -85,7 +85,7 @@
 			text-align: center;
 			height:600px;
 		}
-		
+
 		/* Footer */
 		.column.Footer {
 		    width:100%;
@@ -119,37 +119,12 @@
 		}
 
 		</style>
-		
+
 		<script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<<<<<<< HEAD:html/Report.html
-		<script type="text/javascript"> <!--annual-->
-=======
-		<script type="text/javascript"> 
+
+		<script type="text/javascript">
 		<!--annual-->
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-
-				function drawChart() {
-					var data = google.visualization.arrayToDataTable([
-						['Year', 'Seat', 'Computer','Heatset','Amplifier', 'Expenses'],
-						
-						['2013',  1000,      400, 	500 , 		22, 	333],
-						['2014',  1170,      460, 	100 , 		40, 	554],
-						['2015',  660,       1120,	544, 		34, 	435],
-						['2016',  1030,      540,		543, 		32, 	454],
-						['2017',  1000,      400,		234,		50,		987]
-						
-						
-					]);
-
-					var options = {
-						title: 'Total number of each category',
-						hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-						vAxis: {minValue: 0}
-					};
->>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
-
 				$(document).ready(function(){
 					$.ajax({
 						url: "http://192.168.1.5/DemoTest/php/annualData.php",
@@ -191,7 +166,7 @@
 				});
 		</script>
 		<script type="text/javascript"> <!-- Seat -->
-<<<<<<< HEAD:html/Report.html
+
 			$(document).ready(function(){
 				$.ajax({
 					url: "http://192.168.1.5/DemoTest/php/seatData.php",
@@ -205,37 +180,6 @@
 						});
 					},error: function(res){
 						console.log('Boom error!! :: '+JSON.stringify(res))
-=======
-			google.charts.load('current', {'packages':['corechart', 'bar']});
-			google.charts.setOnLoadCallback(drawStuff);
-
-			function drawStuff() {
-				var chartDiv = document.getElementById('chart_seat');
-
-				var data = google.visualization.arrayToDataTable([
-					['Building', 'Total Seat', 'Null'],
-					['CP2', 800, 23],
-					['TRUE2', 240, 4],
-					['ITALTHAI', 300, 14],
-					['KKN', 500, 9],
-				]);
-
-				var materialOptions = {
-					width: 900,
-					chart: {
-						title: 'Number Seat',
-						//subtitle: 'distance on the left, brightness on the right'
-					},
-					series: {
-						0: { axis: 'Total Seat' }, // Bind series 0 to an axis named 'distance'.
-						1: { axis: 'Null' } // Bind series 1 to an axis named 'brightness'.
-					},
-					axes: {
-						y: {
-							distance: {label: 'parsecs'}, // Left y-axis.
-							brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
-						}
->>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 					}
 				});
 
@@ -271,21 +215,6 @@
 						}
 					};
 
-<<<<<<< HEAD:html/Report.html
-					var classicOptions = {
-						width: 900,
-						series: {
-							0: {targetAxisIndex: 0},
-							1: {targetAxisIndex: 1}
-						},
-						title: 'Nearby galaxies - distance on the left, brightness on the right',
-						vAxes: {
-							// Adds titles to each axis.
-							0: {title: 'parsecs'},
-							1: {title: 'apparent magnitude'}
-						}
-					};
-=======
 				var classicOptions = {
 					width: 900,
 					series: {
@@ -298,12 +227,7 @@
 						0: {title: 'parsecs'},
 						1: {title: 'apparent magnitude'}
 					}
-
-
-
-					
 				};
->>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 
 					function drawMaterialChart() {
 						var materialChart = new google.charts.Bar(chartDiv);
@@ -315,50 +239,27 @@
 			});
 		</script>
 		<script type="text/javascript"> <!--donut computer-->
-<<<<<<< HEAD:html/Report.html
       $(document).ready(function(){
 				google.charts.load("current", {packages:["corechart"]});
-	      google.charts.setOnLoadCallback(drawChart);
-	      function drawChart() {
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+						['Task', 'Hours per Day'],
+						['CP2',     890],
+						['TRUE2',      670],
+						['ITALTHAI',  321],
+						['KKN', 700],
+					]);
 
-	        var options = {
-	          title: 'Computer',
-	          pieHole: 0.4,
-	        };
+					var options = {
+						title: 'Computer per building',
+						pieHole: 0.3,
+					};
 
-	        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-	        chart.draw(data, options);
-	      }
-			})
-=======
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['CP2',     890],
-          ['TRUE2',      670],
-          ['ITALTHAI',  321],
-          ['KKN', 700],
-        ]);
-
-        var options = {
-          title: 'Computer per building',
-          pieHole: 0.3,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
->>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
+					var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+					chart.draw(data, options);
+				}
+    	});
     </script>
 		<script type="text/javascript"> <!--donut amplifire-->
 			$(document).ready(function(){
@@ -368,7 +269,7 @@
 					success: function(res){
 						console.log('fuck')
 						console.log(res)
-					  google.charts.load("current", {packages:["corechart"]});
+						google.charts.load("current", {packages:["corechart"]});
 						google.charts.setOnLoadCallback(function(){
 							drawChart(res);
 						});
@@ -377,24 +278,25 @@
 					}
 				});
 
-      function drawChart(res) {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['CP2',     890],
-          ['TRUE2',      670],
-          ['ITALTHAI',  321],
-          ['KKN', 700],
-        ]);
+				function drawChart(res) {
+					var data = google.visualization.arrayToDataTable([
+						['Task', 'Hours per Day'],
+						['CP2',     890],
+						['TRUE2',      670],
+						['ITALTHAI',  321],
+						['KKN', 700],
+					]);
 
-        var options = {
-          title: 'Amplifire per building',
-          pieHole: 0.3,
-        };
-		
+					var options = {
+						title: 'Amplifire per building',
+						pieHole: 0.3,
+					};
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart_amplifire'));
-        chart.draw(data, options);
-      }
+
+					var chart = new google.visualization.PieChart(document.getElementById('donutchart_amplifire'));
+					chart.draw(data, options);
+				}
+			});
     </script>
 		<script type="text/javascript"> <!--donut headset-->
       google.charts.load("current", {packages:["corechart"]});
@@ -449,13 +351,13 @@ include "nav.php";
 		<div class="w3-opacity">
 		<header class="w3-center w3-margin-bottom">
 			<center><h1 style=" border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>Annual Report </b></h1></center>
-			
+
 		</header>
 		</div>
 	</div>
 </div>
 
-		
+
 <?php
 include "config.php";
 
@@ -567,11 +469,11 @@ $objResult = mysql_fetch_array($objQuery);
 
 	</tbody>
 =======
-	</tbody>	
+	</tbody>
 	</table-->
-	
+
 	<p>Please enter annual detail:</p>
-	
+
 	<form action="saveyear.php" method="POST" enctype="multipart/form-data" name="iny" target="iframe_target" id="iny">
 	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
 		<tr bgcolor="#ffffff" style="font-size:5px;">
@@ -590,13 +492,13 @@ $objResult = mysql_fetch_array($objQuery);
 				<td><input type="number" name="hes" value="0" id="hes" style="width:100%; border-style:none;"></td>
 				<td><input type="number" name="tel" value="0" id="tel" style="width:100%; border-style:none;"></td>
 		</tr>
-		
+
 	</table>
 	<input type="submit" name="submit" value="Update !" />
 	</form>
-	
-	
-	
+
+
+
 	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
 		<tr bgcolor="#ffffff" style="font-size:5px;">
 				<th bgcolor="#cccccc" width="50px;" align="center"><p style="margin:10px"><strong>Year</strong></p></th>
@@ -608,8 +510,8 @@ $objResult = mysql_fetch_array($objQuery);
 		</tr>
 <?php
 	while($objResult = mysql_fetch_array($objQuery))
-	{	
-?>		
+	{
+?>
 	<tr bgcolor="#ffffff" style="font-size:5px;">
 		<td><?php echo $objResult["year"];?></td>
 		<td><?php echo $objResult["seat"];?></td>
@@ -617,11 +519,11 @@ $objResult = mysql_fetch_array($objQuery);
 		<td><?php echo $objResult["am"];?></td>
 		<td><?php echo $objResult["hes"];?></td>
 		<td><?php echo $objResult["tel"];?></td>
-	</tr>	
+	</tr>
 
 <?php
-	}		
-?>	
+	}
+?>
 >>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 	</table>
 
@@ -636,9 +538,9 @@ $objResult = mysql_fetch_array($objQuery);
 	<?php
 		include 'avg_y.php'
 	?>
-	</div>	
-	
-       	
+	</div>
+
+
     <div class="column middlemini">
       <p>Description...</p>
   	</div>
