@@ -524,10 +524,6 @@ $objResult = mysql_fetch_array($objQuery);
 				<td bgcolor="#ffffff" width="20" align="center"><p style="margin:10px"></p></td>
 		</tr>
 
-<<<<<<< HEAD:html/Report.html
-
-	</tbody>
-=======
 	</tbody>
 	</table-->
 
@@ -583,11 +579,8 @@ $objResult = mysql_fetch_array($objQuery);
 <?php
 	}
 ?>
->>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 	</table>
-
  </div>
-</div>
 
 
   <div class="column side">
