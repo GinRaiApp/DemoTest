@@ -75,16 +75,23 @@
 		/* Sub Header */
 		.column.middle3 {
 		    width:100%;
-		    background-color: #f3f8f3;
+		    background-color:pink;
 			text-align: center;
 		}
 
-		/* Footer */
 		.column.middle4 {
 		    width:50%;
 		    background-color: #f8f8f3;
 			text-align: center;
 			height:600px;
+		}
+		
+		/* Footer */
+		.column.Footer {
+		    width:100%;
+			background-image: url("../photos/cityy.jpg");
+		    background-color:pink;
+			text-align: center;
 		}
 
 		/* Middle columnmini */
@@ -112,9 +119,36 @@
 		}
 
 		</style>
+		
 		<script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<<<<<<< HEAD:html/Report.html
 		<script type="text/javascript"> <!--annual-->
+=======
+		<script type="text/javascript"> 
+		<!--annual-->
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+
+				function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+						['Year', 'Seat', 'Computer','Heatset','Amplifier', 'Expenses'],
+						
+						['2013',  1000,      400, 	500 , 		22, 	333],
+						['2014',  1170,      460, 	100 , 		40, 	554],
+						['2015',  660,       1120,	544, 		34, 	435],
+						['2016',  1030,      540,		543, 		32, 	454],
+						['2017',  1000,      400,		234,		50,		987]
+						
+						
+					]);
+
+					var options = {
+						title: 'Total number of each category',
+						hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+						vAxis: {minValue: 0}
+					};
+>>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 
 				$(document).ready(function(){
 					$.ajax({
@@ -157,6 +191,7 @@
 				});
 		</script>
 		<script type="text/javascript"> <!-- Seat -->
+<<<<<<< HEAD:html/Report.html
 			$(document).ready(function(){
 				$.ajax({
 					url: "http://192.168.1.5/DemoTest/php/seatData.php",
@@ -170,6 +205,37 @@
 						});
 					},error: function(res){
 						console.log('Boom error!! :: '+JSON.stringify(res))
+=======
+			google.charts.load('current', {'packages':['corechart', 'bar']});
+			google.charts.setOnLoadCallback(drawStuff);
+
+			function drawStuff() {
+				var chartDiv = document.getElementById('chart_seat');
+
+				var data = google.visualization.arrayToDataTable([
+					['Building', 'Total Seat', 'Null'],
+					['CP2', 800, 23],
+					['TRUE2', 240, 4],
+					['ITALTHAI', 300, 14],
+					['KKN', 500, 9],
+				]);
+
+				var materialOptions = {
+					width: 900,
+					chart: {
+						title: 'Number Seat',
+						//subtitle: 'distance on the left, brightness on the right'
+					},
+					series: {
+						0: { axis: 'Total Seat' }, // Bind series 0 to an axis named 'distance'.
+						1: { axis: 'Null' } // Bind series 1 to an axis named 'brightness'.
+					},
+					axes: {
+						y: {
+							distance: {label: 'parsecs'}, // Left y-axis.
+							brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
+						}
+>>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 					}
 				});
 
@@ -205,6 +271,7 @@
 						}
 					};
 
+<<<<<<< HEAD:html/Report.html
 					var classicOptions = {
 						width: 900,
 						series: {
@@ -218,6 +285,25 @@
 							1: {title: 'apparent magnitude'}
 						}
 					};
+=======
+				var classicOptions = {
+					width: 900,
+					series: {
+						0: {targetAxisIndex: 0},
+						1: {targetAxisIndex: 1}
+					},
+					title: 'Nearby galaxies - distance on the left, brightness on the right',
+					vAxes: {
+						// Adds titles to each axis.
+						0: {title: 'parsecs'},
+						1: {title: 'apparent magnitude'}
+					}
+
+
+
+					
+				};
+>>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
 
 					function drawMaterialChart() {
 						var materialChart = new google.charts.Bar(chartDiv);
@@ -229,6 +315,7 @@
 			});
 		</script>
 		<script type="text/javascript"> <!--donut computer-->
+<<<<<<< HEAD:html/Report.html
       $(document).ready(function(){
 				google.charts.load("current", {packages:["corechart"]});
 	      google.charts.setOnLoadCallback(drawChart);
@@ -251,30 +338,63 @@
 	        chart.draw(data, options);
 	      }
 			})
+=======
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['CP2',     890],
+          ['TRUE2',      670],
+          ['ITALTHAI',  321],
+          ['KKN', 700],
+        ]);
+
+        var options = {
+          title: 'Computer per building',
+          pieHole: 0.3,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+>>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
     </script>
 		<script type="text/javascript"> <!--donut amplifire-->
 			$(document).ready(function(){
-				google.charts.load("current", {packages:["corechart"]});
-	      google.charts.setOnLoadCallback(drawChart);
-	      function drawChart() {
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
+				$.ajax({
+					url: "http://192.168.1.5/DemoTest/php/seatData.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+					  google.charts.load("current", {packages:["corechart"]});
+						google.charts.setOnLoadCallback(function(){
+							drawChart(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
 
-	        var options = {
-	          title: 'Amplifire',
-	          pieHole: 0.4,
-	        };
+      function drawChart(res) {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['CP2',     890],
+          ['TRUE2',      670],
+          ['ITALTHAI',  321],
+          ['KKN', 700],
+        ]);
 
-	        var chart = new google.visualization.PieChart(document.getElementById('donutchart_amplifire'));
-	        chart.draw(data, options);
-	      }
-			})
+        var options = {
+          title: 'Amplifire per building',
+          pieHole: 0.3,
+        };
+		
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart_amplifire'));
+        chart.draw(data, options);
+      }
     </script>
 		<script type="text/javascript"> <!--donut headset-->
       google.charts.load("current", {packages:["corechart"]});
@@ -282,16 +402,15 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['CP2',     890],
+          ['TRUE2',      670],
+          ['ITALTHAI',  321],
+          ['KKN', 700],
         ]);
 
         var options = {
-          title: 'Headset',
-          pieHole: 0.4,
+          title: 'Headset per building',
+          pieHole: 0.3,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart_headset'));
@@ -304,16 +423,15 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['CP2',     890],
+          ['TRUE2',      670],
+          ['ITALTHAI',  321],
+          ['KKN', 700],
         ]);
 
         var options = {
-          title: 'Telephone',
-          pieHole: 0.4,
+          title: 'Telephone per building',
+          pieHole: 0.3,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart_telephone'));
@@ -321,65 +439,40 @@
       }
     </script>
 </head>
-<body>
-
-
-
-<div class="topnav">
-	<nav id="primary_nav_wrap" >
-	<ul>
-	  <li class="current-menu-item "><a href="../html/v3.php">true inventory</a></li>
-	  <li><a href="../html/Report.#" style="border-radius: 4px;">report</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Report Detail </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
-
-		</ul>
-	  </li>
-	  <li><a href="../html/floor_2.php">floor plan</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/add_fp.php">Add Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">All Floor Plan</a></li>
-		</ul>
-	  </li>
-	  <li><a href="../html/master.php">rb master</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="../html/rbm_2_2.php">Add New</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="../html/dbtest.php">DB test</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
-		</ul>
-	  </li>
-
-	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
-	  <li><a href="../html/contact_2.php#">Contact Us</a></li>
-	</ul>
-	</nav>
-</div>
+<?php
+include "nav.php";
+?>
 
 
 <div class="header" style="background-color:transparent!important;" id="annualre">
     <div  >
 		<div class="w3-opacity">
 		<header class="w3-center w3-margin-bottom">
-			<center><h1 style=" border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>Annual Report</b></h1></center>
+			<center><h1 style=" border-bottom: 3px solid lightgray; width:50%; color: maroon; font-weight: bold;"><b>Annual Report </b></h1></center>
+			
 		</header>
 		</div>
 	</div>
 </div>
 
+		
+<?php
+include "config.php";
 
 
-
-  <div class="column middle4">
-    <h2>Main Content</h2>
+$strSQL = "SELECT * FROM annual ";
+$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+$objResult = mysql_fetch_array($objQuery);
+?>
+ <div class="column middle4">
+    <h2>Total Inventory per year</h2>
 		<div id="chart_annual" style="width: 100%; height: 500px;"></div>
   </div>
 
   <div class="column side" style="background-color:#fff5ff;">
-    <h2>Side</h2>
-	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
+    <h2>Annual Detail</h2>
+
+	<!--table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
 	<tbody>
 		<tr bgcolor="#ffffff" style="font-size:5px;">
 				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Year</strong></p></th>
@@ -470,32 +563,90 @@
 				<td bgcolor="#ffffff" width="20" align="center"><p style="margin:10px"></p></td>
 		</tr>
 
+<<<<<<< HEAD:html/Report.html
 
 	</tbody>
+=======
+	</tbody>	
+	</table-->
+	
+	<p>Please enter annual detail:</p>
+	
+	<form action="saveyear.php" method="POST" enctype="multipart/form-data" name="iny" target="iframe_target" id="iny">
+	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
+		<tr bgcolor="#ffffff" style="font-size:5px;">
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Year</strong></p></th>
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Seat</strong></p></th>
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Computer</strong></p></th>
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Amplifire</strong></p></th>
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Headset</strong></p></th>
+				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Telephone</strong></p><? echo $row ?></th>
+		</tr>
+		<tr bgcolor="#ffffff" style="font-size:5px;">
+				<td><input type="number" name="year" value="0" id="year" style="width:100%; border-style:none;"></td>
+				<td><input type="number" name="seat" value="0" id="seat" style="width:100%; border-style:none;"></td>
+				<td><input type="number" name="com" value="0" id="com" style="width:100%; border-style:none;"></td>
+				<td><input type="number" name="am" value="0" id="am" style="width:100%; border-style:none;"></td>
+				<td><input type="number" name="hes" value="0" id="hes" style="width:100%; border-style:none;"></td>
+				<td><input type="number" name="tel" value="0" id="tel" style="width:100%; border-style:none;"></td>
+		</tr>
+		
 	</table>
-  </div>
-</div>
+	<input type="submit" name="submit" value="Update !" />
+	</form>
+	
+	
+	
+	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
+		<tr bgcolor="#ffffff" style="font-size:5px;">
+				<th bgcolor="#cccccc" width="50px;" align="center"><p style="margin:10px"><strong>Year</strong></p></th>
+				<th bgcolor="#cccccc" width="55px;" align="center"><p style="margin:10px"><strong>Seat</strong></p></th>
+				<th bgcolor="#cccccc" width="80px;" align="center"><p style="margin:10px"><strong>Computer</strong></p></th>
+				<th bgcolor="#cccccc" width="75px;" align="center"><p style="margin:10px"><strong>Amplifire</strong></p></th>
+				<th bgcolor="#cccccc" width="75px;" align="center"><p style="margin:10px"><strong>Headset</strong></p></th>
+				<th bgcolor="#cccccc" width="75px;" align="center"><p style="margin:10px"><strong>Telephone</strong></p><? echo $row ?></th>
+		</tr>
+<?php
+	while($objResult = mysql_fetch_array($objQuery))
+	{	
+?>		
+	<tr bgcolor="#ffffff" style="font-size:5px;">
+		<td><?php echo $objResult["year"];?></td>
+		<td><?php echo $objResult["seat"];?></td>
+		<td><?php echo $objResult["com"];?></td>
+		<td><?php echo $objResult["am"];?></td>
+		<td><?php echo $objResult["hes"];?></td>
+		<td><?php echo $objResult["tel"];?></td>
+	</tr>	
 
+<?php
+	}		
+?>	
+>>>>>>> b52f44a5c21b063b6201efd717fb20bc5e6bb627:html/Report.php
+	</table>
+
+ </div>
+</div>
 
 
   <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    <h2>Annual data analysis</h2>
+    <p>Summary and Average per type:</p>
 	<div class="column middlemini">
-      <p>mini box1.</p>
+	<?php
+		include 'avg_y.php'
+	?>
+	</div>	
+	
+       	
+    <div class="column middlemini">
+      <p>Description...</p>
   	</div>
     <div class="column middlemini">
-      <p>mini box1.</p>
-  	</div>
-    <div class="column middlemini">
-      <p>mini box1.</p>
-  	</div>
-    <div class="column middlemini">
-      <p>mini box1.</p>
+      <p>Description..</p>
   	</div>
   </div>
 </div>
-
 
 <!--Report Detail-->
 <div class="column middle3" style="background-color:transparent!important;" id="seatre" >
@@ -515,7 +666,7 @@
                <ul  style="list-style-type: none;">
         		<li>
 				<div class="w3-quarter" >
-                    <div class="w3-container  w3-padding-16 box" id="icp2" style="background-color:#ff9999;">
+                    <div class="w3-padding-16 box" id="icp2" style="background-color:#ff9999;">
                       <table style="width:100%">
                   			  <tr>
                   				  <th colspan="2">CP2 </th>
@@ -535,7 +686,7 @@
 
         		<li>
 				<div class="w3-quarter">
-                    <div class="w3-container  w3-padding-16 box" id="icp2" style="background-color:#ffe699;">
+                    <div class="w3-padding-16 box" id="icp2" style="background-color:#ffe699;">
                       <table style="width:100%">
                   			  <tr>
                   				  <th colspan="2">TRUE2 </th>
@@ -555,7 +706,7 @@
 
         		<li>
 				<div class="w3-quarter">
-                    <div class="w3-container w3-padding-16 box" id="ikkn" style="background-color:#ffccf3;">
+                    <div class="w3-padding-16 box" id="ikkn" style="background-color:#ffccf3;">
                       <table style="width:100%">
                   			  <tr>
                   				  <th colspan="2">ITALTHAI </th>
@@ -575,7 +726,7 @@
 
         		<li>
 				<div class="w3-quarter">
-                    <div class="w3-container w3-padding-16 box" id="ikkn" style="background-color:#ccffff;">
+                    <div class="w3-padding-16 box" id="ikkn" style="background-color:#ccffff;">
                       <table style="width:100%">
                   			  <tr>
                   				  <th colspan="2">KKN </th>
@@ -604,10 +755,11 @@
 
   </div>
   <div class="column middle">
-    <h2>Main Content</h2>
+    <h2>Total Number of Seats & Null Seats Per Building</h2>
 		<div id="chart_seat" style="width: 100%; height: 500px;"></div>
   </div>
 </div>
+
 
 
 <!--Divices Report-->
@@ -624,22 +776,22 @@
 
 <div class="row">
 	 <div class="column side2">
-		<h2>Computer</h2>
+		<h2>Total Computer</h2>
 		<div id="donutchart" style="width: 100%; height: 200px;"></div>
 	 </div>
 
 	  <div class="column side2">
-		<h2>Amplifire</h2>
+		<h2>Total Amplifire</h2>
 		<div id="donutchart_amplifire" style="width: 100%;  height: 200px;"></div>
 	 </div>
 
 	  <div class="column side2">
-		<h2>Headset</h2>
+		<h2>Total Headset</h2>
 		<div id="donutchart_headset" style="wwidth: 100%;  height: 200px;"></div>
 	 </div>
 
 	  <div class="column side2">
-		<h2>Telephone</h2>
+		<h2>Total Telephone</h2>
 		<div id="donutchart_telephone" style="width: 100%;  height: 200px;"></div>
 	 </div>
 </div>
@@ -647,10 +799,13 @@
 
 
 
-<div class="column middle3">
+<div class="column Footer">
     <h2>Footer</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Customer Service Support. [ Facility Management ]</p>
+	<p>Create by Cholticha Wanichluksamee, Thai-Nuchi Institute of Technology [Create date: 05 June 2017]</p>
 </div>
+
+
 
 </body>
 </html>

@@ -5,17 +5,16 @@
 	//database
 	define('DB_HOST', 'localhost');
 	define('DB_USERNAME', 'root');
-	define('DB_PASSWORD', 'root');
-	define('DB_NAME', 'demo');
-	define('DB_PORT','8889')
+	define('DB_PASSWORD', '123456');
+	define('DB_NAME', 'p_inventory');
 
 	//get connection
-	$connect = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
+	$connect = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 	if(!$connect){
 	  die("connect Failed: " . $connect->error);
 	}
-	echo "success";
+	// echo "success";
 
 
 ?>
