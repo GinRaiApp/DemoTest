@@ -1,16 +1,20 @@
 <?php
-	$server = 'localhost';
-	$username = 'root';
-	$password = 'Password*1234';
-	$db = 'p_inventory';
-	//$port = '8889';
 
-	// Create connection
-	$conn = new mysqli($server, $username, $password, $db);
+	header('Content-Type: application/json');
 
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
+	//database
+	define('DB_HOST', 'localhost');
+	define('DB_USERNAME', 'root');
+	define('DB_PASSWORD', '123456');
+	define('DB_NAME', 'p_inventory');
+
+	//get connection
+	$connect = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+	if(!$connect){
+	  die("connect Failed: " . $connect->error);
 	}
-	// echo "Connected successfully : ";
+	// echo "success";
+
+
 ?>
