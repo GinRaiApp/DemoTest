@@ -127,7 +127,7 @@
 		<!--annual-->
 				$(document).ready(function(){
 					$.ajax({
-						url: "http://192.168.1.5/DemoTest/php/annualData.php",
+						url: "../php/annualData.php",
 						dataType: "JSON",
 						success: function(result){
 							console.log('bak')
@@ -169,7 +169,7 @@
 
 			$(document).ready(function(){
 				$.ajax({
-					url: "http://192.168.1.5/DemoTest/php/seatData.php",
+					url: "../php/seatData.php",
 					dataType: "JSON",
 					success: function(res){
 						console.log('fuck')
@@ -264,7 +264,7 @@
 		<script type="text/javascript"> <!--donut amplifire-->
 			$(document).ready(function(){
 				$.ajax({
-					url: "http://192.168.1.5/DemoTest/php/seatData.php",
+					url: "../php/seatData.php",
 					dataType: "JSON",
 					success: function(res){
 						console.log('fuck')
