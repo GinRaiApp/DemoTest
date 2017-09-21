@@ -5,7 +5,7 @@
 	//database
 	define('DB_HOST', 'localhost');
 	define('DB_USERNAME', 'root');
-	define('DB_PASSWORD', '123456');
+	define('DB_PASSWORD', 'Password*1234');
 	define('DB_NAME', 'p_inventory');
 
 	//get connection

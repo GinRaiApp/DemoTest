@@ -240,31 +240,8 @@
 		</script>
 		<script type="text/javascript"> <!--donut computer-->
       $(document).ready(function(){
-				google.charts.load("current", {packages:["corechart"]});
-				google.charts.setOnLoadCallback(drawChart);
-				function drawChart() {
-					var data = google.visualization.arrayToDataTable([
-						['Task', 'Hours per Day'],
-						['CP2',     890],
-						['TRUE2',      670],
-						['ITALTHAI',  321],
-						['KKN', 700],
-					]);
-
-					var options = {
-						title: 'Computer per building',
-						pieHole: 0.3,
-					};
-
-					var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-					chart.draw(data, options);
-				}
-    	});
-    </script>
-		<script type="text/javascript"> <!--donut amplifire-->
-			$(document).ready(function(){
 				$.ajax({
-					url: "../php/seatData.php",
+					url: "../php/TotalCom.php",
 					dataType: "JSON",
 					success: function(res){
 						console.log('fuck')
@@ -279,13 +256,57 @@
 				});
 
 				function drawChart(res) {
-					var data = google.visualization.arrayToDataTable([
-						['Task', 'Hours per Day'],
-						['CP2',     890],
-						['TRUE2',      670],
-						['ITALTHAI',  321],
-						['KKN', 700],
-					]);
+
+					var header = ['Building', 'Computer per Building']
+					var row = new Array();
+
+					$.each(res,function(index,data){
+						row.push(res[index]);
+					})
+
+					var jdata = [header].concat(row);
+
+					var data = google.visualization.arrayToDataTable(jdata);
+
+					var options = {
+						title: 'Computer per building',
+						pieHole: 0.3,
+					};
+
+					var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+					chart.draw(data, options);
+				}
+    	});
+    </script>
+		<script type="text/javascript"> <!--donut amplifire-->
+			$(document).ready(function(){
+				$.ajax({
+					url: "../php/TotalAmp.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+						google.charts.load("current", {packages:["corechart"]});
+						google.charts.setOnLoadCallback(function(){
+							drawChart(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
+
+				function drawChart(res) {
+
+					var header = ['Building', 'Amplifire per Building']
+					var row = new Array();
+
+					$.each(res,function(index,data){
+						row.push(res[index]);
+					})
+
+					var jdata = [header].concat(row);
+
+					var data = google.visualization.arrayToDataTable(jdata);
 
 					var options = {
 						title: 'Amplifire per building',
@@ -299,46 +320,84 @@
 			});
     </script>
 		<script type="text/javascript"> <!--donut headset-->
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['CP2',     890],
-          ['TRUE2',      670],
-          ['ITALTHAI',  321],
-          ['KKN', 700],
-        ]);
+      $(document).ready(function(){
+				$.ajax({
+					url: "../php/TotalHead.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+						google.charts.load("current", {packages:["corechart"]});
+						google.charts.setOnLoadCallback(function(){
+							drawChart(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
 
-        var options = {
-          title: 'Headset per building',
-          pieHole: 0.3,
-        };
+	      function drawChart(res) {
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart_headset'));
-        chart.draw(data, options);
-      }
+					var header = ['Building', 'Headset per Building']
+					var row = new Array();
+
+					$.each(res,function(index,data){
+						row.push(res[index]);
+					})
+
+					var jdata = [header].concat(row);
+
+	        var data = google.visualization.arrayToDataTable(jdata);
+
+	        var options = {
+	          title: 'Headset per building',
+	          pieHole: 0.3,
+	        };
+
+	        var chart = new google.visualization.PieChart(document.getElementById('donutchart_headset'));
+	        chart.draw(data, options);
+	      }
+			});
     </script>
 		<script type="text/javascript"> <!--donut telephone-->
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['CP2',     890],
-          ['TRUE2',      670],
-          ['ITALTHAI',  321],
-          ['KKN', 700],
-        ]);
+      $(document).ready(function(){
+				$.ajax({
+					url: "../php/TotalHead.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+						google.charts.load("current", {packages:["corechart"]});
+						google.charts.setOnLoadCallback(function(){
+							drawChart(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
 
-        var options = {
-          title: 'Telephone per building',
-          pieHole: 0.3,
-        };
+	      function drawChart(res) {
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart_telephone'));
-        chart.draw(data, options);
-      }
+					var header = ['Building', 'Headset per Building']
+					var row = new Array();
+
+					$.each(res,function(index,data){
+						row.push(res[index]);
+					})
+
+					var jdata = [header].concat(row);
+
+	        var data = google.visualization.arrayToDataTable(jdata);
+
+	        var options = {
+	          title: 'Telephone per building',
+	          pieHole: 0.3,
+	        };
+
+	        var chart = new google.visualization.PieChart(document.getElementById('donutchart_telephone'));
+	        chart.draw(data, options);
+	      }
+			});
     </script>
 </head>
 <?php
