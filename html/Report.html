@@ -50,7 +50,7 @@
 		    background-color: #fff5f5;
 		    height:600px;
 		}
-		
+
 			.column.side2 {
 		    width: 25%;
 		    background-color: #ffffff;
@@ -115,112 +115,161 @@
 		<script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript"> <!--annual-->
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
 
-				function drawChart() {
-					var data = google.visualization.arrayToDataTable([
-						['Year', 'Seat', 'Computer','Heatset','Amplifier', 'Expenses'],
+				$(document).ready(function(){
+					$.ajax({
+						url: "http://192.168.1.5/DemoTest/php/annualData.php",
+						dataType: "JSON",
+						success: function(result){
+							console.log('bak')
+							console.log(result)
+							google.charts.load('current', {'packages':['corechart']});
+							google.charts.setOnLoadCallback(function(){
+								drawChart(result);
+							});
+						},error: function(result){
+							console.log('Boom error!! :: '+JSON.stringify(result))
+						}
+					});
+					function drawChart(result) {
+						console.log(JSON.stringify(result))
 
-						['2013',  1000,      400, 	500 , 		22, 	333],
-						['2014',  1170,      460, 	100 , 		40, 	554],
-						['2015',  660,       1120,	544, 		34, 	435],
-						['2016',  1030,      540,		543, 		32, 	454],
-						['2017',  1000,      400,		234,		50,		987]
-					]);
+						var header = ['Year', 'Seat', 'Computer','Heatset','Amplifier', 'Expenses']
+						var row = new Array();
 
-					var options = {
-						title: 'Company Performance',
-						hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-						vAxis: {minValue: 0}
-					};
+						$.each(result,function(index,data){
+							row.push(result[index]);
+						})
 
-					var chart = new google.visualization.AreaChart(document.getElementById('chart_annual'));
-					chart.draw(data, options);
-				}
+						var jdata = [header].concat(row);
+
+						var data = google.visualization.arrayToDataTable(jdata);
+
+						var options = {
+							title: 'Company Performance',
+							hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+							vAxis: {minValue: 0}
+						};
+
+						var chart = new google.visualization.AreaChart(document.getElementById('chart_annual'));
+						chart.draw(data, options);
+					}
+				});
 		</script>
 		<script type="text/javascript"> <!-- Seat -->
-			google.charts.load('current', {'packages':['corechart', 'bar']});
-			google.charts.setOnLoadCallback(drawStuff);
+			$(document).ready(function(){
+				$.ajax({
+					url: "http://192.168.1.5/DemoTest/php/seatData.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+						google.charts.load('current', {'packages':['corechart', 'bar']});
+						google.charts.setOnLoadCallback(function(){
+							drawStuff(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
 
-			function drawStuff() {
-				var chartDiv = document.getElementById('chart_seat');
+				function drawStuff(res) {
+					var chartDiv = document.getElementById('chart_seat');
 
-				var data = google.visualization.arrayToDataTable([
-					['Galaxy', 'Distance', 'Brightness'],
-					['Canis Major Dwarf', 8000, 23.3],
-					['Sagittarius Dwarf', 24000, 4.5],
-					['Ursa Major II Dwarf', 30000, 14.3],
-					['Lg. Magellanic Cloud', 50000, 0.9],
-					['Bootes I', 60000, 13.1]
-				]);
+					var header = ['Building', 'Seat', 'Seat Null']
+					var row = new Array();
 
-				var materialOptions = {
-					width: 900,
-					chart: {
-						title: 'Nearby galaxies',
-						subtitle: 'distance on the left, brightness on the right'
-					},
-					series: {
-						0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
-						1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
-					},
-					axes: {
-						y: {
-							distance: {label: 'parsecs'}, // Left y-axis.
-							brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
+					$.each(res,function(index,data){
+						row.push(res[index]);
+					})
+
+					var jdata = [header].concat(row);
+
+					var data = google.visualization.arrayToDataTable(jdata);
+
+					var materialOptions = {
+						width: 900,
+						chart: {
+							title: 'Nearby galaxies',
+							subtitle: 'distance on the left, brightness on the right'
+						},
+						series: {
+							0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
+							1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+						},
+						axes: {
+							y: {
+								distance: {label: 'parsecs'}, // Left y-axis.
+								brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
+							}
 						}
+					};
+
+					var classicOptions = {
+						width: 900,
+						series: {
+							0: {targetAxisIndex: 0},
+							1: {targetAxisIndex: 1}
+						},
+						title: 'Nearby galaxies - distance on the left, brightness on the right',
+						vAxes: {
+							// Adds titles to each axis.
+							0: {title: 'parsecs'},
+							1: {title: 'apparent magnitude'}
+						}
+					};
+
+					function drawMaterialChart() {
+						var materialChart = new google.charts.Bar(chartDiv);
+						materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
 					}
+
+					drawMaterialChart();
 				};
-
-				var classicOptions = {
-					width: 900,
-					series: {
-						0: {targetAxisIndex: 0},
-						1: {targetAxisIndex: 1}
-					},
-					title: 'Nearby galaxies - distance on the left, brightness on the right',
-					vAxes: {
-						// Adds titles to each axis.
-						0: {title: 'parsecs'},
-						1: {title: 'apparent magnitude'}
-					}
-				};
-
-				function drawMaterialChart() {
-					var materialChart = new google.charts.Bar(chartDiv);
-					materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
-				}
-
-				drawMaterialChart();
-			};
+			});
 		</script>
 		<script type="text/javascript"> <!--donut computer-->
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
+      $(document).ready(function(){
+				google.charts.load("current", {packages:["corechart"]});
+	      google.charts.setOnLoadCallback(drawChart);
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Task', 'Hours per Day'],
+	          ['Work',     11],
+	          ['Eat',      2],
+	          ['Commute',  2],
+	          ['Watch TV', 2],
+	          ['Sleep',    7]
+	        ]);
 
-        var options = {
-          title: 'Computer',
-          pieHole: 0.4,
-        };
+	        var options = {
+	          title: 'Computer',
+	          pieHole: 0.4,
+	        };
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
+	        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+	        chart.draw(data, options);
+	      }
+			})
     </script>
 		<script type="text/javascript"> <!--donut amplifire-->
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
+			$(document).ready(function(){
+				$.ajax({
+					url: "http://192.168.1.5/DemoTest/php/seatData.php",
+					dataType: "JSON",
+					success: function(res){
+						console.log('fuck')
+						console.log(res)
+					  google.charts.load("current", {packages:["corechart"]});
+						google.charts.setOnLoadCallback(function(){
+							drawChart(res);
+						});
+					},error: function(res){
+						console.log('Boom error!! :: '+JSON.stringify(res))
+					}
+				});
+
+      function drawChart(res) {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
           ['Work',     11],
@@ -432,9 +481,9 @@
 				<td bgcolor="#ffffff" width="20" align="center"><p style="margin:10px"></p></td>
 				<td bgcolor="#ffffff" width="20" align="center"><p style="margin:10px"></p></td>
 		</tr>
-		
 
-	</tbody>	
+
+	</tbody>
 	</table>
   </div>
 </div>
