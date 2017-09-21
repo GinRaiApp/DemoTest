@@ -121,6 +121,14 @@
 			 border-style:none;
 			 background-color:linen;
 		}
+		
+		/* Footer */
+		.column.Footer {
+		    width:100%;
+			background-image: url("../photos/cityy.jpg");
+		    background-color:pink;
+			text-align: center;
+		}
 	</style>
 	</head>
 	

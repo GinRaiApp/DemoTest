@@ -51,37 +51,10 @@
 	</style>
 </head>
 <body style="background-color:linen!important;">
-	<nav id="primary_nav_wrap" >
-	<ul>
-	  <li class="current-menu-item "><a href="../html/first.php">true inventory</a></li>
-	  <li><a href="http://localhost/DemoTest/html/leftmenu.php" style="border-radius: 4px;">report</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#annualre"> Annual Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#overview"> Overview </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#seatre"> Seat Report </a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.7; filter: alpha(opacity=70);"><a href="#devicesre"> Devices Report </a></li>
-		  
-		</ul>
-	  </li>
-	  <li><a href="http://localhost/DemoTest/html/floor.php">floor plan</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">All Floor Plan</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Add Floor Plan</a></li>
-		</ul>
-	  </li>
-	  <li><a href="http://localhost/DemoTest/html/master.php">rb master</a>
-		<ul>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:10; filter: alpha(opacity=100);"><a href="#">Sub Menu 1</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.9; filter: alpha(opacity=90);"><a href="#">Sub Menu 2</a></li>
-		  <li style="background-color:#ff9999; border-radius: 4px; opacity:0.8; filter: alpha(opacity=80);"><a href="#">Sub Menu 3</a></li>
-		</ul>
-	  </li>
-	  
-	  <li><a href="http://eus/cm/inventory/index.php#" target="_blank">cm inventory</a></li>
-	  <li><a href="../html/contact.php#">Contact Us</a></li>
-	</ul>
-	</nav>
 
+<?php
+include "nav.php";
+?>
 
 
 	<div class="contactus" style="width:50%; margin:50px auto; padding:20px; background-color:#e6e6e6;	border: 2px dashed red; border-radius: 12px;">

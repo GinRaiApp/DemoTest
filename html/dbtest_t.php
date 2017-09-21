@@ -1,3 +1,4 @@
+		
 <?php
 include "config.php";
 
@@ -8,6 +9,7 @@ $objResult = mysql_fetch_array($objQuery);
 ?>
 
 
+	<p><?php echo"Hello Wolod";?></p>
 	<table bgcolor="#bcbcbc"  style="border-color:lightgray;" class="floating-box" style="width:100%; margin:5px auto;" >
 		<tr bgcolor="#ffffff" style="font-size:5px;">
 				<th bgcolor="#cccccc" width="20" align="center"><p style="margin:10px"><strong>Year</strong></p></th>
@@ -28,9 +30,18 @@ $objResult = mysql_fetch_array($objQuery);
 		<td><?php echo $objResult["am"];?></td>
 		<td><?php echo $objResult["hes"];?></td>
 		<td><?php echo $objResult["tel"];?></td>
-	</tr>		
+	</tr>	
+
 <?php
 	}		
 ?>	
 	</table>
 
+ </div>
+</div>
+
+
+ 
+
+</body>
+</html>
