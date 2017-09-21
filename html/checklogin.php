@@ -32,7 +32,7 @@
 	if ($row['username'] == $username && $row['password'] == $password){
 		echo "<script> 
 		alert('Login Successfully !!!!!!! '); 
-		window.location.href='../html/Report#'; 
+		window.location.href='../html/Report.php'; 
 		</script>";
 		
 		
